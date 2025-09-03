@@ -11,7 +11,7 @@ export default function Footer() {
           Get update by <br className="hidden md:block" /> signup newsletter
         </h2>
 
-        <div className="flex md:pr-[2rem] w-[40%] md:w-1/2 max-w-md">
+        <div className="flex mr:2rem md:pr-[2rem] w-[40%] md:w-1/2 max-w-md">
           <input
             type="email"
             placeholder="your email..."
