@@ -17,11 +17,11 @@ export const Service = () => {
   const [showAll, setShowAll] = useState(false);
   const [projects, setProjects] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("https://crito-website.onrender.com/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
 
-    fetch("http://localhost:5000/projects")
+    fetch("https://crito-website.onrender.com/projects")
       .then((res) => res.json())
       .then((data) => setProjects(data));
   }, []);

@@ -47,20 +47,20 @@ export default function Home() {
   const visibleCards = showAll ? services : services.slice(0, 4);
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("https://crito-website.onrender.com/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
 
-    fetch("http://localhost:5000/stats")
+    fetch("https://crito-website.onrender.com/stats")
       .then((res) => res.json())
       .then((data) => setStats(data));
 
-    fetch("http://localhost:5000/tabs")
+    fetch("https://crito-website.onrender.com/tabs")
       .then((res) => res.json())
       .then((data) => setTabs(data));
 
 
-    fetch("http://localhost:5000/projects")
+    fetch("https://crito-website.onrender.com/projects")
       .then((res) => res.json())
       .then((data) => setProjects(data));
   }, []);
