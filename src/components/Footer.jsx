@@ -6,32 +6,35 @@ export default function Footer() {
     <footer className="bg-[#0d0d25] text-gray-300">
 
       {/* Newsletter Section */}
-      <div className="bg-[#f5f3ee] md:pl-[6rem] flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0 px-6 md:px-16 py-8">
-        <h2 className="text-xl md:text-2xl font-semibold text-gray-900 text-center md:text-left">
+      <div className="bg-[#f5f3ee] flex flex-col items-center justify-center px-4 py-8 md:flex-row md:justify-between md:px-16 md:gap-8">
+        {/* Heading */}
+        <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 text-center md:text-left mb-4 md:mb-0">
           Get update by <br className="hidden md:block" /> signup newsletter
         </h2>
 
-        <div className="flex mr:2rem md:pr-[2rem] w-[40%] md:w-1/2 max-w-md">
+        {/* Input + Button */}
+        <div className="flex w-full max-w-sm sm:max-w-md md:w-1/2">
           <input
             type="email"
             placeholder="your email..."
-            className="flex-1 px-4 py-2 rounded-l-[20px] border border-gray-300 focus:outline-none"
+            className="flex-1 px-3 py-2 text-sm sm:text-base rounded-l-[20px] border border-gray-300 focus:outline-none"
           />
-          <button className="bg-[#FAD783] hover:bg-yellow-400 text-white md:px-6 md:py-2 rounded-r-[20px]">
+          <button className="bg-[#FAD783] hover:bg-yellow-400 text-white px-4 sm:px-6 py-2 rounded-r-[20px]">
             Subscribe →
           </button>
         </div>
       </div>
 
+
       {/* Links */}
       <div className="px-6 md:px-16 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
 
-      
+
         <div className="col-span-2 text-center md:text-left">
           <img src={logo} className="mx-auto md:mx-0 w-[12rem] h-auto" alt="logo" />
           <p className="mt-4 text-sm md:ml-[2rem] leading-relaxed">
-            We denounce with righteous indignation and dislike men who are so beguiled 
-            and demoralized by the charms of pleasure of the moment, so blinded by desire, 
+            We denounce with righteous indignation and dislike men who are so beguiled
+            and demoralized by the charms of pleasure of the moment, so blinded by desire,
             that they cannot foresee.
           </p>
         </div>

@@ -388,7 +388,7 @@ export default function Home() {
 
             <div className="min-h-screen flex flex-col items-center justify-center py-16">
               {/*Cards */}
-              <div className="grid pr-[8rem] pl-[8rem] grid-cols-1 md:grid-cols-4 gap-6  w-11/12 max-w-6xl">
+              <div className="grid md:pr-[8rem] md:pl-[8rem] pr-[2rem] pl-[2rem] grid-cols-1 md:grid-cols-4 gap-6  w-11/12 max-w-6xl">
                 {visibleCards.map((s) => (
                   <div
                     key={s.id}
@@ -503,42 +503,43 @@ export default function Home() {
           <h2 className='text-[2rem] font-semibold mt-[2rem] '>Let's Looks<br />Our Global Projects</h2>
           <div className="py-16 flex flex-col items-center">
 
-            <div className="flex flex-wrap gap-6 pt-4 border-t border-b border-gray-300 pb-4">
+            <div className="flex flex-wrap justify-center md:justify-start gap-3 sm:gap-4 md:gap-6 pt-4 pb-4 border-t border-b border-gray-300">
               <Link
                 to=" "
-                className="px-4 py-2 text-sm font-medium bg-[#FAD783] rounded-full"
+                className="px-4 py-2 text-xs sm:text-sm font-medium bg-[#FAD783] rounded-full text-gray-900"
               >
                 Discover All
               </Link>
 
               <Link
                 to="business-advice"
-                className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-black"
+                className="px-4 py-2 text-xs sm:text-sm font-medium text-gray-700 hover:text-black"
               >
                 Business Advice
               </Link>
 
               <Link
                 to="startup-business"
-                className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-black"
+                className="px-4 py-2 text-xs sm:text-sm font-medium text-gray-700 hover:text-black"
               >
                 Startup Business
               </Link>
 
               <Link
                 to="financial-advice"
-                className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-black"
+                className="px-4 py-2 text-xs sm:text-sm font-medium text-gray-700 hover:text-black"
               >
                 Financial Advice
               </Link>
 
               <Link
                 to="risk-management"
-                className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-black"
+                className="px-4 py-2 text-xs sm:text-sm font-medium text-gray-700 hover:text-black"
               >
                 Risk Management
               </Link>
             </div>
+
             {/* <Outlet /> */}
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 w-2/3 max-w-4xl">
