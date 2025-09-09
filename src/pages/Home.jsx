@@ -388,7 +388,7 @@ export default function Home() {
 
             <div className="min-h-screen flex flex-col items-center justify-center py-16">
               {/*Cards */}
-              <div className="grid md:pr-[8rem] md:pl-[8rem] pr-[2rem] pl-[2rem] grid-cols-1 md:grid-cols-4 gap-6  w-11/12 max-w-6xl">
+              <div className="grid md:pr-[8rem] md:pl-[8rem] pr-[4rem] pl-[4rem] grid-cols-1 md:grid-cols-4 gap-6  w-11/12 max-w-6xl">
                 {visibleCards.map((s) => (
                   <div
                     key={s.id}
