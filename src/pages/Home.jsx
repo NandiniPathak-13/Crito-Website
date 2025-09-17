@@ -213,19 +213,19 @@ export default function Home() {
 
 
       {/* SECTION - 1 */}
-      <div className="section1 mb-[8rem] bg-[#F0EFEA] relative min-h-[auto] h-auto px-4 sm:px-8 md:px-24 lg:px-36 xl:px-48 flex flex-col md:flex-row items-center md:items-start justify-between">
+      <div className="section1 mb-[8rem] bg-[#F0EFEA] relative min-h-[auto] h-auto px-6 md:px-16 lg:px-28 xl:px-32 flex flex-col md:flex-row items-center md:items-start justify-between">
 
 
         {/* RIGHT SECTION */}
         <div className="right-sec w-full md:w-1/2 text-center md:text-left mt-8 md:mt-0">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-[500] text-black leading-snug">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-[500] text-black leading-snug">
             We Provide <br /> Best Business <br /> Solutions
           </h1>
-          <p className="text-gray-500 text-sm mt-4">
+          <p className="text-gray-500 text-sm md:text-[1rem]  xl:text-[1.5rem] mt-4">
             Establish your vision and value proposition <br /> and turn them into
           </p>
 
-          <div className="mt-6 flex justify-center md:justify-start gap-4">
+          <div className="mt-6 sm:flex-row  sm:gap-4 flex justify-center md:justify-start gap-4">
             <a
               href="#"
               className="px-4 py-2 bg-[#FAD783] text-black font-bold text-[12px] rounded-[20px] shadow hover:bg-yellow-700"
@@ -250,9 +250,9 @@ export default function Home() {
         <div className="left-sec mt-[0] relative md:mt-[-8rem] lg:mt-[-8rem] xl:mt-[-8rem] w-full md:w-1/2 flex justify-center md:justify-end ">
           <img src={women} alt="" className="w-auto md:h-[40rem] object-contain" />
         </div>
- <div className="absolute top-10 right-0 w-32 h-32 bg-blue-200 rounded-full -z-10"></div>
-          <div className="absolute bottom-10 right-10 w-12 h-12 bg-black rounded-full opacity-30 -z-10"></div>
-        
+        <div className="absolute top-10 right-0 w-32 h-32 bg-blue-200 rounded-full -z-10"></div>
+        <div className="absolute bottom-10 right-10 w-12 h-12 bg-black rounded-full opacity-30 -z-10"></div>
+
       </div>
 
 
@@ -261,7 +261,7 @@ export default function Home() {
       {/* SECTION - 2 */}
       <div className='bg-white  '>
         <div className='section1_2 '>
-          <img src={image} className='pt-[5rem] mb-[5rem] mt-[-10rem] w-400  h-auto' alt="" />
+          <img src={image} className='pt-[5rem] mb-[5rem] mt-[-10rem] max-w-400 mx-auto w-full h-auto' alt="" />
           <div className="section2 md:ml-[5rem] mr-[2rem] ml-[2rem] md:mr-[5rem]  md:pb-[4rem] bg-white border-1 border-gray-300">
 
             <div className="container  md:flex">
