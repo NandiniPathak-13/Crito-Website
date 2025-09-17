@@ -213,7 +213,7 @@ export default function Home() {
 
 
       {/* SECTION - 1 */}
-      <div className="section1 bg-[#F0EFEA]  min-h-[auto] h-auto px-4 sm:px-8 md:px-24 lg:px-36 xl:px-48 flex flex-col md:flex-row items-center md:items-start justify-between">
+      <div className="section1 mb-[8rem] bg-[#F0EFEA] relative min-h-[auto] h-auto px-4 sm:px-8 md:px-24 lg:px-36 xl:px-48 flex flex-col md:flex-row items-center md:items-start justify-between">
 
 
         {/* RIGHT SECTION */}
@@ -247,18 +247,20 @@ export default function Home() {
         </div>
 
         {/* LEFT SECTION */}
-        <div className="left-sec mt-[0] md:mt-[-8rem] lg:mt-[-8rem] xl:mt-[-8rem] w-full md:w-1/2 flex justify-center md:justify-end ">
-          <img src={women} alt="" className="w-auto md:h-[40rem]" />
+        <div className="left-sec mt-[0] relative md:mt-[-8rem] lg:mt-[-8rem] xl:mt-[-8rem] w-full md:w-1/2 flex justify-center md:justify-end ">
+          <img src={women} alt="" className="w-auto md:h-[40rem] object-contain" />
         </div>
-
+ <div className="absolute top-10 right-0 w-32 h-32 bg-blue-200 rounded-full -z-10"></div>
+          <div className="absolute bottom-10 right-10 w-12 h-12 bg-black rounded-full opacity-30 -z-10"></div>
+        
       </div>
 
 
-      <img src={waves} className='mt-[-20rem] overflow-hidden w-100 h-auto' alt="" />
+      {/* <img src={waves} className='mt-[-20rem] overflow-hidden w-100 h-auto' alt="" /> */}
 
       {/* SECTION - 2 */}
       <div className='bg-white  '>
-        <div className='section1_2 pt-[7rem] md:pt-[20rem] lg:pt-[20rem] xl:pt-[20rem] '>
+        <div className='section1_2 '>
           <img src={image} className='pt-[5rem] mb-[5rem] mt-[-10rem] w-400  h-auto' alt="" />
           <div className="section2 md:ml-[5rem] mr-[2rem] ml-[2rem] md:mr-[5rem]  md:pb-[4rem] bg-white border-1 border-gray-300">
 
