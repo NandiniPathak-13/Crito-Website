@@ -213,7 +213,7 @@ export default function Home() {
 
 
       {/* SECTION - 1 */}
-      <div className="section1 mb-[8rem] bg-[#F0EFEA] relative min-h-[auto] h-auto px-6 md:px-16 lg:px-28 xl:px-40 flex flex-col md:flex-row items-center md:items-start justify-between">
+      <div className="section1 mb-[8rem] bg-[#F0EFEA] relative min-h-[auto] h-auto px-4 sm:px-8 md:px-24 lg:px-36 xl:px-48 flex flex-col md:flex-row items-center md:items-start justify-between">
 
 
         {/* RIGHT SECTION */}
