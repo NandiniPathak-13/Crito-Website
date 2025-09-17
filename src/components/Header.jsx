@@ -39,7 +39,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navbar Content */}
-          <div className="hidden md:flex flex-col w-full ml-8">
+          <div className="hidden lg:flex flex-col w-full ml-8">
             {/* Top Section */}
             <div className="flex justify-between items-center border-b border-gray-300 pb-2 text-xs text-gray-500">
               <div className="flex gap-6">
@@ -85,7 +85,7 @@ const Header = () => {
 
           {/* Mobile Hamburger */}
           <button
-            className="md:hidden text-2xl absolute top-4 right-4"
+            className="lg:hidden text-2xl absolute top-4 right-4"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <IoClose /> : <GiHamburgerMenu />}
