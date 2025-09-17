@@ -264,7 +264,7 @@ export default function Home() {
           <img src={image} className='pt-[5rem] mb-[5rem] mt-[-10rem] max-w-400 mx-auto w-full h-auto' alt="" />
           <div className="section2 md:ml-[3rem] mr-[2rem] ml-[2rem] md:mr-[3rem] lg:mr-[8rem] lg:ml-[8rem] md:pb-[4rem] bg-white border-1 border-gray-300">
 
-            <div className="container  mx-auto px-4 sm:px-6 md:px-10 lg:px-10 xl:px-20 flex flex-col md:flex-row">
+            <div className="container  mx-auto px-4 sm:px-6 md:px-10 lg:px-10 xl:px-20 flex flex-col md:flex-row lg:flex-row xl:flex-row">
               <div className='basis-1/2 text-center md:text-left'>
                 <h3 className='text-orange-500 font-bold mt-[2rem] md:ml-[4rem] md:mt-[4rem]'>Fetures</h3>
                 <h2 className='md:text-[2rem] text-2xl font-semibold mt-[2rem] md:ml-[4rem]'>Less Accounting is <br />trusted by thousand <br />of companies</h2>
@@ -282,38 +282,38 @@ export default function Home() {
                 <div className="flex flex-col gap-16">
 
                   {/* First Row */}
-                  <div className="flex gap-6 md:gap-10">
+                  <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row gap-6 lg:gap-15  xl:gap-20 md:gap-10">
                     <div className="basis-1/2">
                       <img src={handshake} className="w-8 h-auto mx-auto md:mx-0 lg:mx-0 xl:mx-0" alt="Business Advice" />
-                      <h1 className="mt-6 font-bold mx-auto md:mx-0 lg:mx-0 xl:mx-0">Business Advice</h1>
-                      <p className="text-gray-500 text-sm mt-2">
+                      <h1 className="mt-6 font-bold mx-auto md:mx-0 lg:mx-0 xl:mx-0 md:text-center lg:text-left xl:text-left text-center ">Business Advice</h1>
+                      <p className="text-gray-500 ml-[1.8rem] mr-[1.8rem] md:ml-[0] md:mr-[0] lg:ml-[0] lg:mr-[0] xl:mr-[0] xl:ml-[0] text-sm mt-2  md:text-center lg:text-left xl:text-left text-center">
                         Essentially formula for how a business is going to compete.
                       </p>
                     </div>
 
-                    <div className="basis-1/2">
+                    <div className="basis-1/2  mt-[1rem] md:mt-[0] lg:mt-[0] xl:mt-[0]">
                       <img src={bulb} className="w-8 h-auto mx-auto md:mx-0 lg:mx-0 xl:mx-0" alt="Startup Business" />
-                      <h1 className="mt-6 font-bold mx-auto md:mx-0 lg:mx-0 xl:mx-0">Startup Business</h1>
-                      <p className="text-gray-500 text-sm mt-2">
+                      <h1 className="mt-6 font-bold mx-auto md:mx-0 lg:mx-0 xl:mx-0 md:text-center lg:text-left xl:text-left text-center  ">Startup Business</h1>
+                      <p className="text-gray-500  ml-[1.8rem] mr-[1.8rem] md:ml-[0] md:mr-[0] lg:ml-[0] lg:mr-[0] xl:mr-[0] xl:ml-[0] md:text-center lg:text-left xl:text-left text-center text-sm mt-2">
                         Essentially formula for how a business is going to compete.
                       </p>
                     </div>
                   </div>
 
                   {/* Second Row */}
-                  <div className="flex gap-6 md:gap-10">
-                    <div className="basis-1/2">
+                  <div className="flex flex-col md:flex-col lg:flex-row xl:flex-row gap-6 md:gap-10 lg:gap-15  xl:gap-20 ">
+                    <div className="basis-1/2  mt-[0.5rem] md:mt-[0] lg:mt-[0] xl:mt-[0]">
                       <img src={chart} className="w-8 h-auto mx-auto md:mx-0 lg:mx-0 xl:mx-0" alt="Financial Advice" />
-                      <h1 className="mt-6 font-bold mx-auto md:mx-0 lg:mx-0 xl:mx-0">Financial Advice</h1>
-                      <p className="text-gray-500 text-sm mt-2">
+                      <h1 className="mt-6 font-bold mx-auto md:mx-0 lg:mx-0 xl:mx-0 md:text-center lg:text-left xl:text-left text-center ">Financial Advice</h1>
+                      <p className="text-gray-500  ml-[1.8rem] mr-[1.8rem] md:ml-[0] md:mr-[0] lg:ml-[0] lg:mr-[0] xl:mr-[0] xl:ml-[0] text-sm mt-2 md:text-center lg:text-left xl:text-left text-center">
                         Essentially formula for how a business is going to compete.
                       </p>
                     </div>
 
-                    <div className="basis-1/2">
-                      <img src={cube} className="w-8 h-auto mx-auto md:mx-0 lg:mx-0 xl:mx-0" alt="Risk Management" />
-                      <h1 className="mt-6 mx-auto md:mx-0 lg:mx-0 xl:mx-0 font-bold">Risk Management</h1>
-                      <p className="text-gray-500 text-sm mt-2">
+                    <div className="basis-1/2 mt-[1rem] md:mt-[0] lg:mt-[0] xl:mt-[0]">
+                      <img src={cube} className="w-8 h-auto mx-auto md:mx-0 lg:mx-0 xl:mx-0 m" alt="Risk Management" />
+                      <h1 className="mt-6 mx-auto md:mx-0 lg:mx-0 xl:mx-0 font-bold md:text-center lg:text-left xl:text-left text-center ">Risk Management</h1>
+                      <p className="text-gray-500  ml-[1.8rem] mr-[1.8rem] md:ml-[0] md:mr-[0] lg:ml-[0] lg:mr-[0] xl:mr-[0] xl:ml-[0] text-sm mt-2 md:text-center lg:text-left xl:text-left text-center">
                         Essentially formula for how a business is going to compete.
                       </p>
                     </div>
