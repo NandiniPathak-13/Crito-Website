@@ -214,7 +214,7 @@ export default function Home() {
 
       {/* SECTION - 1 */}
       <div className="section1 mb-[8rem] bg-[#F0EFEA] relative min-h-[auto] h-auto px-6 sm:px-8 md:px-16 lg:px-28 xl:px-32 2xl:px-45 flex flex-col md:flex-row items-center md:items-start justify-between">
-                                                                                   
+
 
         {/* RIGHT SECTION */}
         <div className="right-sec w-full md:w-1/2 text-center md:text-left mt-8 md:mt-0">
@@ -262,59 +262,70 @@ export default function Home() {
       <div className='bg-white  '>
         <div className='section1_2 '>
           <img src={image} className='pt-[5rem] mb-[5rem] mt-[-10rem] max-w-400 mx-auto w-full h-auto' alt="" />
-          <div className="section2 md:ml-[5rem] mr-[2rem] ml-[2rem] md:mr-[5rem]  md:pb-[4rem] bg-white border-1 border-gray-300">
+          <div className="section2 md:ml-[3rem] mr-[2rem] ml-[2rem] md:mr-[3rem] lg:mr-[8rem] lg:ml-[8rem] md:pb-[4rem] bg-white border-1 border-gray-300">
 
-            <div className="container  md:flex">
+            <div className="container  mx-auto px-4 sm:px-6 md:px-10 lg:px-10 xl:px-20 flex flex-col md:flex-row">
               <div className='basis-1/2 text-center md:text-left'>
-                <h3 className='text-orange-500 font-bold mt-[2rem] md:ml-[5rem] md:mt-[4rem]'>Fetures</h3>
-                <h2 className='md:text-[2rem] text-2xl font-semibold mt-[2rem] md:ml-[5rem]'>Less Accounting is <br />trusted by thousand <br />of companies</h2>
+                <h3 className='text-orange-500 font-bold mt-[2rem] md:ml-[4rem] md:mt-[4rem]'>Fetures</h3>
+                <h2 className='md:text-[2rem] text-2xl font-semibold mt-[2rem] md:ml-[4rem]'>Less Accounting is <br />trusted by thousand <br />of companies</h2>
                 <div className="hidden mt-[40px] md:flex gap-5">
                   <a
                     href="#"
-                    className="px-4 py-2 ml-[5rem] bg-[#FAD783] text-black font-bold text-[12px] rounded-[20px] shadow hover:bg-yellow-700"
+                    className="px-4 py-2 ml-[4rem] bg-[#FAD783] text-black font-bold text-[12px] rounded-[20px] shadow hover:bg-yellow-700"
                   >
                     <span className='flex gap-1'> Get Counseling <MdOutlineCallMade size={15} /></span>
                   </a>
                 </div>
 
               </div>
-              <div className='  basis-1/2'>
+              <div className="basis-1/2 mt-12 md:mt-0 lg:mt-16 xl:mt-20 mb-12 md:mb-0  xl:mb-20 ">
+                <div className="flex flex-col gap-16">
 
-                <div className='flex mt-[4rem] md:mb-[0] mb-[2rem] md:ml-[0] ml-[15px] flex-col gap-20 sm:gap-20'>
-                  <div className='flex gap-6 sm:gap-6 md:gap-[30px]'>
-                    <div className='basis-1/2'>
-                      <img src={handshake} className='w-8 h-auto' alt="" />
-                      <h1 className='mt-[1.5rem] font-bold'> Business Advice</h1>
-                      <p className='text-gray-500 text-sm pr-[12px] mt-[0.5rem]'> Essentially formula for how a business is going to compete.</p>
+                  {/* First Row */}
+                  <div className="flex gap-6 md:gap-10">
+                    <div className="basis-1/2">
+                      <img src={handshake} className="w-8 h-auto mx-auto md:mx-0 lg:mx-0 xl:mx-0" alt="Business Advice" />
+                      <h1 className="mt-6 font-bold mx-auto md:mx-0 lg:mx-0 xl:mx-0">Business Advice</h1>
+                      <p className="text-gray-500 text-sm mt-2">
+                        Essentially formula for how a business is going to compete.
+                      </p>
                     </div>
 
-                    <div className='basis-1/2'>
-                      <img src={bulb} className='w-8 h-auto' alt="" />
-
-                      <h1 className='mt-[1.5rem] font-bold'> Startup Business</h1>
-                      <p className='text-gray-500 text-sm pr-[12px] mt-[0.5rem]'> Essentially formula for how a business is going to compete.</p>
-                    </div>
-                  </div>
-                  <div className='flex gap-6 sm:gap-6 md:gap-[30px]'>
-                    <div className='basis-1/2'>
-                      <img src={chart} className='w-8 h-auto' alt="" />
-                      <h1 className='mt-[1.5rem] font-bold'>Financial Advice</h1>
-                      <p className='text-gray-500 text-sm pr-[12px] mt-[0.5rem]'> Essentially formula for how a business is going to compete.</p>
-                    </div>
-                    <div className='basis-1/2'>
-                      {/* <FaCube className="text-4xl text-black mb-3" /> */}
-
-
-                      <img src={cube} className='w-8 h-auto' alt="" />
-                      <h1 className='mt-[1.5rem] font-bold'> Risk Management</h1>
-                      <p className='text-gray-500 text-sm pr-[12px] mt-[0.5rem]'> Essentially formula for how a business is going to compete.</p>
+                    <div className="basis-1/2">
+                      <img src={bulb} className="w-8 h-auto mx-auto md:mx-0 lg:mx-0 xl:mx-0" alt="Startup Business" />
+                      <h1 className="mt-6 font-bold mx-auto md:mx-0 lg:mx-0 xl:mx-0">Startup Business</h1>
+                      <p className="text-gray-500 text-sm mt-2">
+                        Essentially formula for how a business is going to compete.
+                      </p>
                     </div>
                   </div>
+
+                  {/* Second Row */}
+                  <div className="flex gap-6 md:gap-10">
+                    <div className="basis-1/2">
+                      <img src={chart} className="w-8 h-auto mx-auto md:mx-0 lg:mx-0 xl:mx-0" alt="Financial Advice" />
+                      <h1 className="mt-6 font-bold mx-auto md:mx-0 lg:mx-0 xl:mx-0">Financial Advice</h1>
+                      <p className="text-gray-500 text-sm mt-2">
+                        Essentially formula for how a business is going to compete.
+                      </p>
+                    </div>
+
+                    <div className="basis-1/2">
+                      <img src={cube} className="w-8 h-auto mx-auto md:mx-0 lg:mx-0 xl:mx-0" alt="Risk Management" />
+                      <h1 className="mt-6 mx-auto md:mx-0 lg:mx-0 xl:mx-0 font-bold">Risk Management</h1>
+                      <p className="text-gray-500 text-sm mt-2">
+                        Essentially formula for how a business is going to compete.
+                      </p>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+
 
         <div className="section2 flex md:pt-[0] pt-[2rem] flex-col md:flex-row">
           {/* Left-Image Section */}
