@@ -248,7 +248,7 @@ export default function Home() {
 
         {/* LEFT SECTION */}
         <div className="left-sec mt-[0] relative md:mt-[-8rem] lg:mt-[-8rem] xl:mt-[-6rem] w-full md:w-1/2 flex justify-center md:justify-end ">
-          <img src={women} alt="" className="w-auto md:h-[40rem] object-contain" />
+          <img src={women} alt="" className="w-auto md:h-[40rem] lg:h-[45rem] object-contain" />
         </div>
         <div className="absolute top-10 right-0 w-32 h-32 bg-blue-200 rounded-full -z-10"></div>
         <div className="absolute bottom-10 right-10 w-12 h-12 bg-black rounded-full opacity-30 -z-10"></div>
