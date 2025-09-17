@@ -104,7 +104,7 @@ export default function Home() {
   return (
     <div >
       {/* Navbar for HOME PAGE */}
-      <header className="w-full pb-[5rem] bg-[#F0EFEA] shadow-sm">
+      <header className="w-full pb-[5rem] bg-[#F0EFEA] ">
         {/* Main Navbar */}
         <div className="max-w-screen-xl mx-auto px-6 md:px-16 lg:px-28 xl:px-32">
           <div className="flex items-center justify-between py-2 relative">
@@ -213,8 +213,8 @@ export default function Home() {
 
 
       {/* SECTION - 1 */}
-      <div className="section1 bg-[#F0EFEA] min-h-screen md:h-[40.9rem] px-4 sm:px-8 md:px-24 lg:px-36 xl:px-48 
-flex flex-col md:flex-row items-center md:items-start justify-between">
+      <div className="section1 bg-[#F0EFEA]  min-h-[auto] h-auto px-4 sm:px-8 md:px-24 lg:px-36 xl:px-48 flex flex-col md:flex-row items-center md:items-start justify-between">
+
 
         {/* RIGHT SECTION */}
         <div className="right-sec w-full md:w-1/2 text-center md:text-left mt-8 md:mt-0">
@@ -247,63 +247,66 @@ flex flex-col md:flex-row items-center md:items-start justify-between">
         </div>
 
         {/* LEFT SECTION */}
-        <div className="left-sec w-full md:w-1/2 mt-8 md:mt-[-7rem] lg:mt-[-7rem] xl:mt-[-7rem] flex justify-center md:justify-end">
-          <img src={women} alt="" className="w-[80%] md:w-110 h-auto" />
+        <div className="left-sec mt-[0] md:mt-[-8rem] lg:mt-[-8rem] xl:mt-[-8rem] w-full md:w-1/2 flex justify-center md:justify-end ">
+          <img src={women} alt="" className="w-auto md:h-[40rem]" />
         </div>
+
       </div>
 
 
       <img src={waves} className='mt-[-20rem] overflow-hidden w-100 h-auto' alt="" />
 
       {/* SECTION - 2 */}
-      <div className='bg-white  h-[150rem]'>  
-        <img src={image} className='pt-[5rem] mb-[5rem] mt-[-10rem] w-400  h-auto' alt="" />
-        <div className="section2 md:ml-[5rem] mr-[2rem] ml-[2rem] md:mr-[5rem]  md:pb-[4rem] bg-white border-1 border-gray-300">
+      <div className='bg-white  '>
+        <div className='section1_2 pt-[7rem] md:pt-[20rem] lg:pt-[20rem] xl:pt-[20rem] '>
+          <img src={image} className='pt-[5rem] mb-[5rem] mt-[-10rem] w-400  h-auto' alt="" />
+          <div className="section2 md:ml-[5rem] mr-[2rem] ml-[2rem] md:mr-[5rem]  md:pb-[4rem] bg-white border-1 border-gray-300">
 
-          <div className="container  md:flex">
-            <div className='basis-1/2 text-center md:text-left'>
-              <h3 className='text-orange-500 font-bold mt-[2rem] md:ml-[5rem] md:mt-[4rem]'>Fetures</h3>
-              <h2 className='md:text-[2rem] text-2xl font-semibold mt-[2rem] md:ml-[5rem]'>Less Accounting is <br />trusted by thousand <br />of companies</h2>
-              <div className="hidden mt-[40px] md:flex gap-5">
-                <a
-                  href="#"
-                  className="px-4 py-2 ml-[5rem] bg-[#FAD783] text-black font-bold text-[12px] rounded-[20px] shadow hover:bg-yellow-700"
-                >
-                  <span className='flex gap-1'> Get Counseling <MdOutlineCallMade size={15} /></span>
-                </a>
-              </div>
-
-            </div>
-            <div className='  basis-1/2'>
-
-              <div className='flex mt-[4rem] md:mb-[0] mb-[2rem] md:ml-[0] ml-[15px] flex-col gap-20 sm:gap-20'>
-                <div className='flex gap-6 sm:gap-6 md:gap-[30px]'>
-                  <div className='basis-1/2'>
-                    <img src={handshake} className='w-8 h-auto' alt="" />
-                    <h1 className='mt-[1.5rem] font-bold'> Business Advice</h1>
-                    <p className='text-gray-500 text-sm pr-[12px] mt-[0.5rem]'> Essentially formula for how a business is going to compete.</p>
-                  </div>
-
-                  <div className='basis-1/2'>
-                    <img src={bulb} className='w-8 h-auto' alt="" />
-
-                    <h1 className='mt-[1.5rem] font-bold'> Startup Business</h1>
-                    <p className='text-gray-500 text-sm pr-[12px] mt-[0.5rem]'> Essentially formula for how a business is going to compete.</p>
-                  </div>
+            <div className="container  md:flex">
+              <div className='basis-1/2 text-center md:text-left'>
+                <h3 className='text-orange-500 font-bold mt-[2rem] md:ml-[5rem] md:mt-[4rem]'>Fetures</h3>
+                <h2 className='md:text-[2rem] text-2xl font-semibold mt-[2rem] md:ml-[5rem]'>Less Accounting is <br />trusted by thousand <br />of companies</h2>
+                <div className="hidden mt-[40px] md:flex gap-5">
+                  <a
+                    href="#"
+                    className="px-4 py-2 ml-[5rem] bg-[#FAD783] text-black font-bold text-[12px] rounded-[20px] shadow hover:bg-yellow-700"
+                  >
+                    <span className='flex gap-1'> Get Counseling <MdOutlineCallMade size={15} /></span>
+                  </a>
                 </div>
-                <div className='flex gap-6 sm:gap-6 md:gap-[30px]'>
-                  <div className='basis-1/2'>
-                    <img src={chart} className='w-8 h-auto' alt="" />
-                    <h1 className='mt-[1.5rem] font-bold'>Financial Advice</h1>
-                    <p className='text-gray-500 text-sm pr-[12px] mt-[0.5rem]'> Essentially formula for how a business is going to compete.</p>
+
+              </div>
+              <div className='  basis-1/2'>
+
+                <div className='flex mt-[4rem] md:mb-[0] mb-[2rem] md:ml-[0] ml-[15px] flex-col gap-20 sm:gap-20'>
+                  <div className='flex gap-6 sm:gap-6 md:gap-[30px]'>
+                    <div className='basis-1/2'>
+                      <img src={handshake} className='w-8 h-auto' alt="" />
+                      <h1 className='mt-[1.5rem] font-bold'> Business Advice</h1>
+                      <p className='text-gray-500 text-sm pr-[12px] mt-[0.5rem]'> Essentially formula for how a business is going to compete.</p>
+                    </div>
+
+                    <div className='basis-1/2'>
+                      <img src={bulb} className='w-8 h-auto' alt="" />
+
+                      <h1 className='mt-[1.5rem] font-bold'> Startup Business</h1>
+                      <p className='text-gray-500 text-sm pr-[12px] mt-[0.5rem]'> Essentially formula for how a business is going to compete.</p>
+                    </div>
                   </div>
-                  <div className='basis-1/2'>
-                    {/* <FaCube className="text-4xl text-black mb-3" /> */}
+                  <div className='flex gap-6 sm:gap-6 md:gap-[30px]'>
+                    <div className='basis-1/2'>
+                      <img src={chart} className='w-8 h-auto' alt="" />
+                      <h1 className='mt-[1.5rem] font-bold'>Financial Advice</h1>
+                      <p className='text-gray-500 text-sm pr-[12px] mt-[0.5rem]'> Essentially formula for how a business is going to compete.</p>
+                    </div>
+                    <div className='basis-1/2'>
+                      {/* <FaCube className="text-4xl text-black mb-3" /> */}
 
 
-                    <img src={cube} className='w-8 h-auto' alt="" />
-                    <h1 className='mt-[1.5rem] font-bold'> Risk Management</h1>
-                    <p className='text-gray-500 text-sm pr-[12px] mt-[0.5rem]'> Essentially formula for how a business is going to compete.</p>
+                      <img src={cube} className='w-8 h-auto' alt="" />
+                      <h1 className='mt-[1.5rem] font-bold'> Risk Management</h1>
+                      <p className='text-gray-500 text-sm pr-[12px] mt-[0.5rem]'> Essentially formula for how a business is going to compete.</p>
+                    </div>
                   </div>
                 </div>
               </div>
