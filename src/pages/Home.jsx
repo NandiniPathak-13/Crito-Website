@@ -104,42 +104,36 @@ export default function Home() {
   return (
     <div >
       {/* Navbar for HOME PAGE */}
-      <header className="w-full  pl-[1rem] pr-[1rem] md:pl-[8rem] justify-center  md:pr-[9rem] pb-[5.8rem] bg-[#F0EFEA] shadow-sm">
-        <div className="navbar-container md:flex flex items-center">
+      <header className="w-full pb-[5rem] bg-[#F0EFEA] shadow-sm">
+        {/* Main Navbar */}
+        <div className="max-w-screen-xl mx-auto px-6 md:px-16 lg:px-28 xl:px-32">
+          <div className="flex items-center justify-between py-2 relative">
 
-          <div className="logo-image">
-            <img src={logo} alt="logo image" className="w-35   h-auto" />
-          </div>
+            {/* Logo */}
+            <div className="logo-image flex-shrink-0">
+              <img src={logo} alt="logo image" className="w-35  h-auto md:mt-[-18px]" />
+            </div>
 
-          <button
-            className="md:hidden text-2xl absolute top-4 right-4"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <IoClose /> : <GiHamburgerMenu />}
-          </button>
 
-          <div className="navbar-content hidden md:flex pt-[5px] pl-[1rem]  text-[11.5px] gap-[4rem] text-gray-500 justify-between items-center">
-            <div className="divider hidden md:flex  flex-col">
-
-              <div className="topsection  pb-[5px] flex gap-[6.5rem] border-b-1 border-gray-400">
-                <div className="right flex gap-2">
-                  <div className='border-r border-gray-400 pr-[6.5px]'>
-                    <span className="flex items-center gap-1"><FiPhoneCall size={13} /> +1 (520) 256 3650</span>
-                  </div>
-                  <div className='border-r border-gray-400 pr-[6.5px]'>
-                    <span className="flex items-center gap-1"><HiOutlineMail size={15} /> info@bizcam24.com</span>
-                  </div>
-                  <div>
-                    <span className="flex items-center gap-1"><HiOutlineLocationMarker size={15} /> 120 F 2th YT, Melborn NY, 1259</span>
-                  </div>
+            <div className="hidden lg:flex flex-col w-full ml-8">
+              {/* Top Section */}
+              <div className="flex justify-between items-center border-b border-gray-300 pb-2 text-xs text-gray-500">
+                <div className="flex gap-4">
+                  <span className="flex items-center gap-1 border-r border-gray-300 pr-2">
+                    <FiPhoneCall size={13} /> +1 (520) 256 3650
+                  </span>
+                  <span className="flex items-center gap-1 border-r border-gray-300 pr-2">
+                    <HiOutlineMail size={15} /> info@bizcam24.com
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <HiOutlineLocationMarker size={15} /> 120 F 2th YT, Melborn NY, 1259
+                  </span>
                 </div>
-
-                <div className="left flex">
-                  <div className='border-r border-gray-400'>
-                    <span className="flex pr-[8px] items-center gap-2"><FaClock /> Mon - Fri: 09:00 - 05:00</span>
-                  </div>
-
-                  <div className="flex gap-3 pl-[3px] mt-[3px] text-gray-600">
+                <div className="flex items-center gap-4">
+                  <span className="flex items-center gap-2 border-r border-gray-300 pr-3">
+                    <FaClock /> Mon - Fri: 09:00 - 05:00
+                  </span>
+                  <div className="flex gap-3 text-gray-600">
                     <FaFacebookF className="cursor-pointer hover:text-black" />
                     <FaTwitter className="cursor-pointer hover:text-black" />
                     <FaInstagram className="cursor-pointer hover:text-black" />
@@ -148,58 +142,64 @@ export default function Home() {
                 </div>
               </div>
 
-
-              <div className="bottomsection pt-[15px]  text-[13px] hidden md:flex space-x-8">
-                <Link
-                  to="/"
-                  className={`tab ${isActiveTab('/') ? 'activetab text-black ' : 'text-gray-500 hover:text-black'}`}
-                >
-                  Home
-                </Link>
-
-                <Link
-                  to="/about"
-                  className={`tab ${isActiveTab('/about') ? 'activetab text-black ' : 'text-gray-500 hover:text-black'}`}
-                >
-                  About
-                </Link>
-                <Link
-                  to="/service"
-                  className={`tab ${isActiveTab('/service') ? 'activetab text-black ' : 'text-gray-500 hover:text-black'}`}
-                >
-                  Service
-                </Link>
-
-                <Link
-                  to="/blog"
-                  className={`tab ${isActiveTab('/blog') ? 'activetab text-black ' : 'text-gray-500 hover:text-black'}`}
-                >
-                  Blog
-                </Link>
-
-                <Link
-                  to="/contact"
-                  className={`tab ${isActiveTab('/contact') ? 'activetab text-black ' : 'text-gray-500 hover:text-black'}`}
-                >
-                  Contact
-                </Link>
-
-
-                <div className="hidden ml-[20rem] mt-[-10px] md:flex">
-                  <a
-                    href="#"
-                    className="px-4 py-2 bg-[#FAD783] text-black font-bold text-[12px] rounded-[20px] shadow hover:bg-yellow-700"
+              {/* Bottom Section */}
+              <div className="flex items-center justify-between pt-2 text-sm">
+                <div className="flex space-x-8">
+                  <Link
+                    to="/"
+                    className={`tab ${isActiveTab('/') ? 'activetab text-black ' : 'text-gray-500 hover:text-black'}`}
                   >
-                    <span className='flex gap-1'> Get Counseling <MdOutlineCallMade size={15} /></span>
-                  </a>
+                    Home
+                  </Link>
+
+                  <Link
+                    to="/about"
+                    className={`tab ${isActiveTab('/about') ? 'activetab text-black ' : 'text-gray-500 hover:text-black'}`}
+                  >
+                    About
+                  </Link>
+                  <Link
+                    to="/service"
+                    className={`tab ${isActiveTab('/service') ? 'activetab text-black ' : 'text-gray-500 hover:text-black'}`}
+                  >
+                    Service
+                  </Link>
+
+                  <Link
+                    to="/blog"
+                    className={`tab ${isActiveTab('/blog') ? 'activetab text-black ' : 'text-gray-500 hover:text-black'}`}
+                  >
+                    Blog
+                  </Link>
+
+                  <Link
+                    to="/contact"
+                    className={`tab ${isActiveTab('/contact') ? 'activetab text-black ' : 'text-gray-500 hover:text-black'}`}
+                  >
+                    Contact
+                  </Link>
                 </div>
+                <a href="#" className="px-5 py-2 bg-[#FAD783] text-black font-semibold text-xs rounded-full shadow hover:bg-yellow-600">
+                  <span className="flex items-center gap-1">
+                    Get Counseling <MdOutlineCallMade size={14} />
+                  </span>
+                </a>
               </div>
             </div>
+
+            {/* Mobile Hamburger */}
+            <button
+              className="lg:hidden text-2xl absolute top-4 right-4"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <IoClose /> : <GiHamburgerMenu />}
+            </button>
           </div>
         </div>
-        {/* For Mobile */}
+
+        {/* Mobile Menu */}
         {isOpen && (
-          <div className=" absolute  bg-[#F0EFEA] right-4 shadow-lg rounded-lg p-4 flex flex-col items-end space-y-4 md:hidden z-50">
+          <div className="absolute top-16 right-4 bg-[#F0EFEA] shadow-lg rounded-lg p-4 flex flex-col items-end space-y-4 md:hidden z-50">
             <Link onClick={() => setIsOpen(false)} to="/" className={`${isActiveTab('/') ? 'text-black font-bold' : 'text-gray-600'} hover:text-black`}>Home</Link>
             <Link onClick={() => setIsOpen(false)} to="/about" className={`${isActiveTab('/about') ? 'text-black font-bold' : 'text-gray-600'} hover:text-black`}>About</Link>
             <Link onClick={() => setIsOpen(false)} to="/service" className={`${isActiveTab('/service') ? 'text-black font-bold' : 'text-gray-600'} hover:text-black`}>Service</Link>
@@ -208,22 +208,22 @@ export default function Home() {
           </div>
         )}
 
-
       </header>
 
 
 
       {/* SECTION - 1 */}
-      <div className="section1 bg-[#F0EFEA] min-h-screen md:h-[37.3rem] px-4 md:px-[9rem] flex flex-col md:flex-row items-center md:items-start">
+      <div className="section1 bg-[#F0EFEA] min-h-screen md:h-[40.9rem] px-4 sm:px-8 md:px-24 lg:px-36 xl:px-48 
+flex flex-col md:flex-row items-center md:items-start justify-between">
 
-        <div className="right-sec w-full md:basis-1/2 text-center md:text-left mt-8 md:mt-0">
+        {/* RIGHT SECTION */}
+        <div className="right-sec w-full md:w-1/2 text-center md:text-left mt-8 md:mt-0">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-[500] text-black leading-snug">
             We Provide <br /> Best Business <br /> Solutions
           </h1>
           <p className="text-gray-500 text-sm mt-4">
             Establish your vision and value proposition <br /> and turn them into
           </p>
-
 
           <div className="mt-6 flex justify-center md:justify-start gap-4">
             <a
@@ -246,17 +246,18 @@ export default function Home() {
           </div>
         </div>
 
-
-        <div className="left-sec w-full md:basis-1/2 mt-8 md:mt-[-7rem] md:ml-[8rem] flex justify-center md:justify-end">
+        {/* LEFT SECTION */}
+        <div className="left-sec w-full md:w-1/2 mt-8 md:mt-[-7rem] lg:mt-[-7rem] xl:mt-[-7rem] flex justify-center md:justify-end">
           <img src={women} alt="" className="w-[80%] md:w-110 h-auto" />
         </div>
       </div>
 
-      <img src={waves} className='mt-[-20rem] w-100 h-auto' alt="" />
+
+      <img src={waves} className='mt-[-20rem] overflow-hidden w-100 h-auto' alt="" />
 
       {/* SECTION - 2 */}
-      <div className='bg-white  h-[150rem]'>
-        <img src={image} className='pt-[5rem] mb-[5rem] mt-[-8rem] w-400  h-auto' alt="" />
+      <div className='bg-white  h-[150rem]'>  
+        <img src={image} className='pt-[5rem] mb-[5rem] mt-[-10rem] w-400  h-auto' alt="" />
         <div className="section2 md:ml-[5rem] mr-[2rem] ml-[2rem] md:mr-[5rem]  md:pb-[4rem] bg-white border-1 border-gray-300">
 
           <div className="container  md:flex">
