@@ -37,19 +37,19 @@ const Header = () => {
     const isActiveTab = (path) => location.pathname === path;
 
     return (
-        <header className="w-full pl-[1rem] pr-[1rem] md:pl-[8rem]   md:pr-[9rem] pb-[3rem] bg-[#F0EFEA] shadow-sm">
-            <div className="navbar-container md:flex flex items-center justify-between">
+        <header className="w-full pl-[1rem] pr-[1rem] md:pl-[8rem]  justify-center  md:pr-[9rem] pb-[3rem] bg-[#F0EFEA] shadow-sm">
+            <div className="navbar-container md:flex flex items-center ">
 
                 <div className="logo-image">
                     <img src={logo} alt="logo image" className="w-35   h-auto" />
                 </div>
 
-                <button
-                    className="md:hidden text-2xl"
-                    onClick={() => setIsOpen(!isOpen)}
-                >
-                    {isOpen ? <IoClose /> : <GiHamburgerMenu />}
-                </button>
+               <button
+                           className="md:hidden text-2xl absolute top-4 right-4"
+                           onClick={() => setIsOpen(!isOpen)}
+                         >
+                           {isOpen ? <IoClose /> : <GiHamburgerMenu />}
+                         </button>
 
                 <div className="navbar-content hidden md:flex pt-[5px] pl-[1rem]  text-[11.5px] gap-[4rem] text-gray-500 justify-between items-center">
                     <div className="divider hidden md:flex  flex-col">

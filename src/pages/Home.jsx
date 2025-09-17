@@ -104,15 +104,15 @@ export default function Home() {
   return (
     <div >
       {/* Navbar for HOME PAGE */}
-      <header className="w-full  pl-[1rem] pr-[1rem] md:pl-[8rem]   md:pr-[9rem] pb-[5.8rem] bg-[#F0EFEA] shadow-sm">
-        <div className="navbar-container md:flex flex items-center justify-between">
+      <header className="w-full  pl-[1rem] pr-[1rem] md:pl-[8rem] justify-center  md:pr-[9rem] pb-[5.8rem] bg-[#F0EFEA] shadow-sm">
+        <div className="navbar-container md:flex flex items-center">
 
           <div className="logo-image">
             <img src={logo} alt="logo image" className="w-35   h-auto" />
           </div>
 
           <button
-            className="md:hidden text-2xl"
+            className="md:hidden text-2xl absolute top-4 right-4"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <IoClose /> : <GiHamburgerMenu />}
@@ -197,7 +197,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* For Mobiles */}
+        {/* For Mobile */}
         {isOpen && (
           <div className=" absolute  bg-[#F0EFEA] right-4 shadow-lg rounded-lg p-4 flex flex-col items-end space-y-4 md:hidden z-50">
             <Link onClick={() => setIsOpen(false)} to="/" className={`${isActiveTab('/') ? 'text-black font-bold' : 'text-gray-600'} hover:text-black`}>Home</Link>
