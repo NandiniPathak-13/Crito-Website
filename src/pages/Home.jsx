@@ -266,7 +266,7 @@ export default function Home() {
           </div>
           <div className="section2 md:ml-[3rem] mr-[2rem] ml-[2rem] md:mr-[3rem] lg:mr-[8rem] lg:ml-[8rem] md:pb-[4rem] bg-white border-1 border-gray-300">
 
-            <div className="container  mx-auto px-4 sm:px-6 md:px-10 lg:px-10 xl:px-20 flex flex-col md:flex-row lg:flex-row xl:flex-row">
+            <div className="container  mx-auto px-4 sm:px-6 md:px-10 lg:px-10 xl:px-20 flex flex-col md:flex-col lg:flex-row xl:flex-row">
               <div className='basis-1/2 text-center md:text-center lg:text-left xl:text-left'>
                 <h3 className='text-orange-500 font-bold mt-[2rem] lg:ml-[2rem]  md:mt-[4rem]  xl:ml-[2rem] '>Fetures</h3>
                 <h2 className='md:text-[2rem] text-2xl font-semibold lg:ml-[2rem] md:mt-[2rem] lg:mt-[2rem] xl:mt-[4rem]  xl:ml-[2rem]  mt-[2rem] md:ml-[4rem]'>Less Accounting is <br />trusted by thousand <br />of companies</h2>
@@ -336,12 +336,12 @@ export default function Home() {
           </div>
 
           {/* Right-Text Section */}
-          <div className="basis-1/2 text-center md:text-left px-6 md:px-0">
+          <div className="basis-1/2 text-center md:text-center lg:text-left xl:text-left px-6 md:px-0">
             <h3 className="text-orange-500 font-bold mt-[2rem] md:mt-[4rem] md:ml-[5rem]">
               About Company
             </h3>
 
-            <h2 className="text-[1.5rem] md:text-[2rem] font-semibold mt-[1rem] md:mt-[2rem] md:ml-[5rem]">
+            <h2 className="text-[1.5rem] md:text-[2rem] lg:text-[2rem] font-semibold mt-[1rem] md:mt-[2rem] xl:ml-[5rem] lg:ml-[5rem]">
               We Are Business <br /> Consulting & Credit <br /> Repair Experts
             </h2>
 
@@ -357,7 +357,7 @@ export default function Home() {
             </p>
 
 
-            <div className="flex gap-5 mt-[30px] justify-center md:justify-start md:ml-[5rem]">
+            <div className="flex gap-5 mt-[30px] justify-center md:justify-center lg:justify-start md:ml-[5rem]">
               <a
                 href="#"
                 className="px-4 py-2 bg-[#1b1b1b] text-white font-bold text-[12px] rounded-[20px] shadow hover:bg-yellow-700"
@@ -424,7 +424,7 @@ export default function Home() {
                     </div>
 
                     <button
-                      className={`mt-4 lg:ml-[7rem] md:ml-[7rem] xl:ml-[7rem] ml-[14rem] w-10 h-10 flex items-center justify-center rounded-full ${s.active ? "bg-white text-black" : "bg-black text-white"}`}
+                      className={`mt-4 lg:ml-[7rem] md:ml-[7rem] xl:ml-[7rem] ml-[10rem] w-10 h-10 flex items-center justify-center rounded-full ${s.active ? "bg-white text-black" : "bg-black text-white"}`}
                     >
                       <FaArrowRightLong size={18} />
                     </button>
@@ -456,15 +456,15 @@ export default function Home() {
         </div>
         {/* SECTION - 4 */}
         <div className="section4">
-          <div className="flex md:flex-row flex-col md:text-left text-center md:ml-[7rem]">
+          <div className="flex px-6 md:px-16 lg:px-28 xl:px-32  md:flex-col lg:flex-row xl:flex-row flex-col md:text-left text-center lg:ml-[2rem]">
             <div className='basis-1/2 '>
 
 
-              <h3 className='text-orange-500 font-bold md:ml-[5rem] mt-[4rem]'>Why Choose Us</h3>
-              <h2 className='md:text-[2rem] text-[1.5rem] font-semibold mt-[2rem] md:ml-[5rem]'>Reasons Why We<br />are Best Business <br />Consulting Agency</h2>
+              <h3 className='text-orange-500 font-bold lg:ml-[3rem] xl:ml-[3rem] mt-[4rem]'>Why Choose Us</h3>
+              <h2 className='lg:text-[2rem] xl:text-[2rem] md:text-[1.7rem]  text-[1.5rem] font-semibold mt-[2rem] lg:ml-[3rem]  xl:ml-[3rem]'>Reasons Why We<br />are Best Business <br />Consulting Agency</h2>
               <div className='mt-[2rem]'>
 
-                <span className='pt-[2rem] md:ml-[8rem] font-bold'>Intro Video</span>
+                <span className='pt-[2rem] lg:ml-[8rem] xl:ml-[8rem] font-bold'>Intro Video</span>
               </div>
 
               <p className='text-gray-500 text-left text-[13px] mr-[7rem] ml-[8rem] md:ml-[8rem] mt-[0.2rem]'>
