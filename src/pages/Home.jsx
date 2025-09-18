@@ -111,7 +111,7 @@ export default function Home() {
 
             {/* Logo */}
             <div className="logo-image flex-shrink-0">
-              <img src={logo} alt="logo image" className="w-35  h-auto md:mt-[-18px]" />
+              <img src={logo} alt="logo image" className="w-35  h-auto mt-[-18px] lg:mt-[-18px] xl:mt-[-18px] md:mt-[-18px]" />
             </div>
 
 
