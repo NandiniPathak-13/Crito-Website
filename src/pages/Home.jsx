@@ -456,7 +456,7 @@ export default function Home() {
         </div>
         {/* SECTION - 4 */}
         <div className="section4">
-          <div className="flex px-6 md:px-16 lg:px-28 xl:px-32  md:flex-col lg:flex-row xl:flex-row flex-col md:text-left text-center lg:ml-[2rem]">
+          <div className="flex px-6 md:px-16 lg:px-28 xl:px-32  md:flex-col lg:flex-row xl:flex-row flex-col md:text-center text-center xl:text-left lg:text-left lg:ml-[2rem]">
             <div className='basis-1/2 '>
 
 
@@ -467,40 +467,40 @@ export default function Home() {
                 <span className='pt-[2rem] lg:ml-[8rem] xl:ml-[8rem] font-bold'>Intro Video</span>
               </div>
 
-              <p className='text-gray-500 text-left text-[13px] mr-[7rem] ml-[8rem] md:ml-[8rem] mt-[0.2rem]'>
+              <p className='text-gray-500 text-left text-[13px] mr-[7rem] ml-[7rem] lg:ml-[8rem] mt-[0.2rem]'>
                 In their lights she does lights.
               </p>
               <div className='mt-[-2rem]  ml-[5rem]'>  <span > <BiPlay size={20} /></span>
               </div>
-              <div className='mt-[2rem]'>
+               <div className='mt-[2rem]'>
 
-                <span className='pt-[2rem] md:ml-[8rem] font-bold'>Intro Video</span>
+                <span className='pt-[2rem] lg:ml-[8rem] xl:ml-[8rem] font-bold'>Intro Video</span>
               </div>
 
-              <p className='text-gray-500  text-[13px] mr-[7rem] ml-[8rem] mt-[0.2rem]'>
+              <p className='text-gray-500 text-left text-[13px] mr-[7rem] ml-[7rem] lg:ml-[8rem] mt-[0.2rem]'>
                 In their lights she does lights.
               </p>
-              <div className='mt-[-2rem] ml-[5rem]'>  <span > <BiPlay size={20} /></span>
+              <div className='mt-[-2rem]  ml-[5rem]'>  <span > <BiPlay size={20} /></span>
               </div>
-              <div className='mt-[2rem]'>
+               <div className='mt-[2rem]'>
 
-                <span className='pt-[2rem] md:ml-[8rem] font-bold'>Intro Video</span>
+                <span className='pt-[2rem] lg:ml-[8rem] xl:ml-[8rem] font-bold'>Intro Video</span>
               </div>
 
-              <p className='text-gray-500  text-[13px] mr-[7rem] ml-[8rem] mt-[0.2rem]'>
+              <p className='text-gray-500 text-left text-[13px] mr-[7rem] ml-[7rem] lg:ml-[8rem] mt-[0.2rem]'>
                 In their lights she does lights.
               </p>
-              <div className='mt-[-2rem] ml-[5rem]'>  <span > <BiPlay size={20} /></span>
+              <div className='mt-[-2rem]  ml-[5rem]'>  <span > <BiPlay size={20} /></span>
               </div>
-              <div className='mt-[2rem]'>
+               <div className='mt-[2rem]'>
 
-                <span className='pt-[2rem] md:ml-[8rem] font-bold'>Intro Video</span>
+                <span className='pt-[2rem] lg:ml-[8rem] xl:ml-[8rem] font-bold'>Intro Video</span>
               </div>
 
-              <p className='text-gray-500  text-[13px] mr-[7rem] ml-[8rem] mt-[0.2rem]'>
+              <p className='text-gray-500 text-left text-[13px] mr-[7rem] ml-[7rem] lg:ml-[8rem] mt-[0.2rem]'>
                 In their lights she does lights.
               </p>
-              <div className='mt-[-2rem] ml-[5rem]'>  <span > <BiPlay size={20} /></span>
+              <div className='mt-[-2rem]  ml-[5rem]'>  <span > <BiPlay size={20} /></span>
               </div>
 
 
@@ -522,7 +522,7 @@ export default function Home() {
           <h2 className='text-[2rem] font-semibold mt-[2rem] '>Let's Looks<br />Our Global Projects</h2>
           <div className="py-16 flex flex-col items-center">
 
-            <div className="flex flex-wrap justify-center md:justify-start gap-3 sm:gap-4 md:gap-6 pt-4 pb-4 border-t border-b border-gray-300">
+            <div className="flex flex-wrap md:justify-center justify-center lg:justify-start gap-3 sm:gap-4 lg:gap-6 pt-4 pb-4 border-t border-b border-gray-300">
               <Link
                 to=" "
                 className="px-4 py-2 text-xs sm:text-sm font-medium bg-[#FAD783] rounded-full text-gray-900"
