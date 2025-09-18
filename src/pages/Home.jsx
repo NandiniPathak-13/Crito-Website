@@ -261,17 +261,19 @@ export default function Home() {
       {/* SECTION - 2 */}
       <div className='bg-white  '>
         <div className='section1_2 '>
-          <img src={image} className='pt-[5rem] mb-[5rem] mt-[-10rem] max-w-400 mx-auto w-full h-auto' alt="" />
+          <div className='flex justify-center'>
+          <img src={image} className=' px-6 sm:px-8 md:px-17 lg:px-29 xl:px-33 pt-[5rem] mb-[5rem] mt-[-10rem] max-w-400 mx-auto w-full h-auto' alt="" />
+          </div>
           <div className="section2 md:ml-[3rem] mr-[2rem] ml-[2rem] md:mr-[3rem] lg:mr-[8rem] lg:ml-[8rem] md:pb-[4rem] bg-white border-1 border-gray-300">
 
             <div className="container  mx-auto px-4 sm:px-6 md:px-10 lg:px-10 xl:px-20 flex flex-col md:flex-row lg:flex-row xl:flex-row">
-              <div className='basis-1/2 text-center md:text-left'>
-                <h3 className='text-orange-500 font-bold mt-[2rem] md:ml-[4rem] md:mt-[4rem]'>Fetures</h3>
-                <h2 className='md:text-[2rem] text-2xl font-semibold mt-[2rem] md:ml-[4rem]'>Less Accounting is <br />trusted by thousand <br />of companies</h2>
+              <div className='basis-1/2 text-center md:text-center lg:text-left xl:text-left'>
+                <h3 className='text-orange-500 font-bold mt-[2rem] lg:ml-[2rem]  md:mt-[4rem]  xl:ml-[2rem] '>Fetures</h3>
+                <h2 className='md:text-[2rem] text-2xl font-semibold lg:ml-[2rem] md:mt-[2rem] lg:mt-[2rem] xl:mt-[4rem]  xl:ml-[2rem]  mt-[2rem] md:ml-[4rem]'>Less Accounting is <br />trusted by thousand <br />of companies</h2>
                 <div className="hidden mt-[40px] md:flex gap-5">
                   <a
                     href="#"
-                    className="px-4 py-2 ml-[4rem] bg-[#FAD783] text-black font-bold text-[12px] rounded-[20px] shadow hover:bg-yellow-700"
+                    className="px-4 py-2 ml-[4rem] lg:ml-[2rem]  xl:ml-[2rem] bg-[#FAD783] text-black font-bold text-[12px] rounded-[20px] shadow hover:bg-yellow-700"
                   >
                     <span className='flex gap-1'> Get Counseling <MdOutlineCallMade size={15} /></span>
                   </a>
@@ -282,7 +284,7 @@ export default function Home() {
                 <div className="flex flex-col gap-16">
 
                   {/* First Row */}
-                  <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row gap-6 lg:gap-15  xl:gap-20 md:gap-10">
+                  <div className="flex flex-col md:flex-col lg:flex-row xl:flex-row gap-6 lg:gap-15  xl:gap-20 md:gap-10">
                     <div className="basis-1/2">
                       <img src={handshake} className="w-8 h-auto mx-auto md:mx-0 lg:mx-0 xl:mx-0" alt="Business Advice" />
                       <h1 className="mt-6 font-bold mx-auto md:mx-0 lg:mx-0 xl:mx-0 md:text-center lg:text-left xl:text-left text-center ">Business Advice</h1>
@@ -327,7 +329,7 @@ export default function Home() {
 
 
 
-        <div className="section2 flex md:pt-[0] pt-[2rem] flex-col md:flex-row">
+        <div className="section2 flex md:pt-[0] pt-[2rem] flex-col lg:flex-row md:flex-col xl:flex-row ">
           {/* Left-Image Section */}
           <div className="basis-1/2 pl-0 md:pl-[8rem] pt-[2rem] md:pt-[4rem] flex justify-center">
             <img src={photo1} className="w-[80%] md:w-120 h-auto" alt="" />
@@ -377,13 +379,13 @@ export default function Home() {
 
 
         {/* SECTION - 3 */}
-        <div className='bg-[#F0EFEA] mt-[4rem]'>
+        <div className='bg-[#F0EFEA] px-6 md:px-16 lg:px-28 xl:px-32 mt-[4rem]'>
           <div className="section3">
-            <h3 className="text-orange-500 md:ml-[10rem] font-bold md:text-left text-center pt-[2rem] md:pt-[4rem]">
+            <h3 className="text-orange-500  font-bold md:text-left lg:text-left xl:text-left text-center pt-[2rem] md:pt-[4rem]">
               Our Services
             </h3>
 
-            <div className="flex flex-col md:ml-[2rem] md:flex-row items-center md:items-start px-6 md:px-[8rem]">
+            <div className="flex flex-col md:flex-row items-center md:items-start">
               {/* Left */}
               <div className="basis-1/2 text-center md:text-left">
                 <h2 className="text-[1.5rem] md:text-[2rem] font-semibold mt-[1.5rem] md:mt-[2rem]">
@@ -405,7 +407,7 @@ export default function Home() {
 
             <div className="min-h-screen flex flex-col items-center justify-center py-16">
               {/*Cards */}
-              <div className="grid md:pr-[8rem] md:pl-[8rem] pr-[4rem] pl-[4rem] grid-cols-1 md:grid-cols-4 gap-6  w-11/12 max-w-6xl">
+              <div className="grid mx-auto grid-cols-1 md:grid-cols-4 gap-6  w-11/12 max-w-6xl">
                 {visibleCards.map((s) => (
                   <div
                     key={s.id}
@@ -422,7 +424,7 @@ export default function Home() {
                     </div>
 
                     <button
-                      className={`mt-4 ml-[7rem] w-10 h-10 flex items-center justify-center rounded-full ${s.active ? "bg-white text-black" : "bg-black text-white"}`}
+                      className={`mt-4 lg:ml-[7rem] md:ml-[7rem] xl:ml-[7rem] ml-[14rem] w-10 h-10 flex items-center justify-center rounded-full ${s.active ? "bg-white text-black" : "bg-black text-white"}`}
                     >
                       <FaArrowRightLong size={18} />
                     </button>
