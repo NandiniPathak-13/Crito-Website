@@ -21,6 +21,7 @@ const Header = () => {
             case "/blog": return "Blog";
             case "/contact": return "Contact";
             case "/service": return "Service";
+              case "/blog/blogdetails/": return "Blog";
             default: return "Page";
         }
     };

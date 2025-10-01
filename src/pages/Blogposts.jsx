@@ -6,7 +6,6 @@ import "slick-carousel/slick/slick-theme.css";
 import '../index.css'
 
 
-
 const settings = {
 
     focusOnSelect: true,
