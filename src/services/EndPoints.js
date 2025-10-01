@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-export const BaseUrl='https://crito-website-1.onrender.com'
+export const BaseUrl='http://localhost:9000'
 
 
 
