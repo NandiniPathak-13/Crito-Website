@@ -14,7 +14,7 @@ export const AllPosts = () => {
   useEffect(() => {
     const GetAllData = async () => {
       try {
-        const response = await get("/blog/getpost");
+        const response = await get(`${import.meta.env.VITE_API_URL}/blog/getpost`);
         const data = response.data;
         setPost(data.posts);
 

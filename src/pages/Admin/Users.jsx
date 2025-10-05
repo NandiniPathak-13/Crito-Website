@@ -10,7 +10,7 @@ export const Users = () => {
   useEffect(() => {
     const GetAllData = async () => {
       try {
-        const response = await get("/dashboard/allusers");
+        const response = await get(`${import.meta.env.VITE_API_URL}/dashboard/allusers`);
         const data = response.data;
 
         setuserss(data.Users)
