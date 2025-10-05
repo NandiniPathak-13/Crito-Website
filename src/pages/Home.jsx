@@ -151,7 +151,12 @@ export default function Home() {
                   >
                     Home
                   </Link>
-
+                  <Link
+                    to="/admin"
+                    className={`tab ${isActiveTab('/') ? 'activetab text-black ' : 'text-gray-500 hover:text-black'}`}
+                  >
+                    admin
+                  </Link>
                   <Link
                     to="/about"
                     className={`tab ${isActiveTab('/about') ? 'activetab text-black ' : 'text-gray-500 hover:text-black'}`}
@@ -262,7 +267,7 @@ export default function Home() {
       <div className='bg-white  '>
         <div className='section1_2 '>
           <div className='flex justify-center'>
-          <img src={image} className=' px-6 sm:px-8 md:px-17 lg:px-29 xl:px-33 pt-[5rem] mb-[5rem] mt-[-10rem] max-w-400 mx-auto w-full h-auto' alt="" />
+            <img src={image} className=' px-6 sm:px-8 md:px-17 lg:px-29 xl:px-33 pt-[5rem] mb-[5rem] mt-[-10rem] max-w-400 mx-auto w-full h-auto' alt="" />
           </div>
           <div className="section2 md:ml-[3rem] mr-[2rem] ml-[2rem] md:mr-[3rem] lg:mr-[8rem] lg:ml-[8rem] md:pb-[4rem] bg-white border-1 border-gray-300">
 
@@ -472,7 +477,7 @@ export default function Home() {
               </p>
               <div className='mt-[-2rem]  ml-[5rem]'>  <span > <BiPlay size={20} /></span>
               </div>
-               <div className='mt-[2rem]'>
+              <div className='mt-[2rem]'>
 
                 <span className='pt-[2rem] lg:ml-[8rem] xl:ml-[8rem] font-bold'>Intro Video</span>
               </div>
@@ -482,7 +487,7 @@ export default function Home() {
               </p>
               <div className='mt-[-2rem]  ml-[5rem]'>  <span > <BiPlay size={20} /></span>
               </div>
-               <div className='mt-[2rem]'>
+              <div className='mt-[2rem]'>
 
                 <span className='pt-[2rem] lg:ml-[8rem] xl:ml-[8rem] font-bold'>Intro Video</span>
               </div>
@@ -492,7 +497,7 @@ export default function Home() {
               </p>
               <div className='mt-[-2rem]  ml-[5rem]'>  <span > <BiPlay size={20} /></span>
               </div>
-               <div className='mt-[2rem]'>
+              <div className='mt-[2rem]'>
 
                 <span className='pt-[2rem] lg:ml-[8rem] xl:ml-[8rem] font-bold'>Intro Video</span>
               </div>
