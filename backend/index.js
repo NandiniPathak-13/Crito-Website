@@ -14,8 +14,8 @@ const PORT = process.env.PORT || 3000
 const app = express()
 
 const corsOptions={
-    origin: '*',
-    credentials:true
+   origin: "https://crito-website.vercel.app",
+  credentials: true,      
 }
 
 //database connection
