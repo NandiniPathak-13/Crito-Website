@@ -29,7 +29,7 @@ export default function Sidebar() {
 
             {/* Sidebar */}
             <aside
-                className={`bg-gray-900 text-white h-screen p-4 flex flex-col shadow-xl transition-all duration-300 ${isOpen ? "w-64" : "w-20"
+                className={`bg-gray-900 text-white h-screen p-4 flex flex-col shadow-xl transition-all duration-300 fixed top-0 left-0 ${isOpen ? "w-64" : "w-20"
                     }`}
             >
                 <div className="flex items-center justify-between mb-10">
