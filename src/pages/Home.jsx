@@ -151,18 +151,8 @@ export default function Home() {
                   >
                     Home
                   </Link>
-                  <Link
-                    to="/admin"
-                    className={`tab ${isActiveTab('/') ? 'activetab text-black ' : 'text-gray-500 hover:text-black'}`}
-                  >
-                    admin
-                  </Link>
-                  <Link
-                    to="/register"
-                    className={`tab ${isActiveTab('/') ? 'activetab text-black ' : 'text-gray-500 hover:text-black'}`}
-                  >
-                    register
-                  </Link>
+                  
+                 
                   <Link
                     to="/about"
                     className={`tab ${isActiveTab('/about') ? 'activetab text-black ' : 'text-gray-500 hover:text-black'}`}

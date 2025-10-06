@@ -3,17 +3,17 @@ import logo from '../assets/logo3.png'
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0d0d25] text-gray-300">
+    <footer className="bg-[#0d0d25]  text-gray-300">
 
       {/* Newsletter Section */}
-      <div className="bg-[#f5f3ee] flex flex-col items-center justify-center px-4 py-8 md:flex-row md:justify-between md:px-16 md:gap-8">
+      <div className="bg-[#f5f3ee] px-6 md:px-16 lg:px-28 xl:px-32  flex flex-col items-center justify-center  py-8 md:flex-row lg:flex-row md:justify-between lg:justify-between  ">
         {/* Heading */}
-        <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 text-center md:text-left mb-4 md:mb-0">
-          Get update by <br className="hidden md:block" /> signup newsletter
+        <h2 className="text-lg sm:text-xl lg:text-3xl md:text-2xl font-semibold text-gray-900 text-center  lg:text-left md:text-left  mb-4  lg:mb-0 md:mb-0">
+          Get update by <br className="hidden   lg:block md:block" /> signup newsletter
         </h2>
 
         {/* Input + Button */}
-        <div className="flex w-full max-w-sm sm:max-w-md md:w-1/2">
+        <div className="flex  w-full max-w-sm sm:max-w-md lg:w-1/2 md:w-1/2">
           <input
             type="email"
             placeholder="your email..."
@@ -27,12 +27,12 @@ export default function Footer() {
 
 
       {/* Links */}
-      <div className="px-6 md:px-16 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
+      <div className=" px-6 md:px-16 lg:px-28 xl:px-32 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5   lg:grid-cols-5 gap-8">
 
 
-        <div className="col-span-2 text-center md:text-left">
-          <img src={logo} className="mx-auto md:mx-0 w-[12rem] h-auto" alt="logo" />
-          <p className="mt-4 text-sm md:ml-[2rem] leading-relaxed">
+        <div className="col-span-2 lg:mt-[2rem] text-center lg:text-left md:text-left">
+          <img src={logo} className="mx-auto md:mx-0 w-[11rem] h-auto" alt="logo" />
+          <p className="mt-3 text-sm lg:pt-3 md:pt-3 leading-relaxed">
             We denounce with righteous indignation and dislike men who are so beguiled
             and demoralized by the charms of pleasure of the moment, so blinded by desire,
             that they cannot foresee.
@@ -40,9 +40,9 @@ export default function Footer() {
         </div>
 
         {/* Company */}
-        <div className="md:mt-[2rem] md:ml-[2rem]">
+        <div className="md:mt-[2rem]  md:ml-[2rem] lg:mt-[2rem] lg:ml-[2rem]">
           <h3 className="font-semibold text-lg mb-4">Company</h3>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-4 text-sm">
             <li><a href="#">About</a></li>
             <li><a href="#">Features</a></li>
             <li><a href="#">Works</a></li>
@@ -51,9 +51,9 @@ export default function Footer() {
         </div>
 
         {/* Help */}
-        <div className="md:mt-[2rem] ">
+        <div className="md:mt-[2rem] lg:mt-[2rem]">
           <h3 className="font-semibold text-lg mb-4">Help</h3>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-4 text-sm">
             <li><a href="#">Customer Support</a></li>
             <li><a href="#">Delivery Details</a></li>
             <li><a href="#">Terms & Conditions</a></li>
@@ -62,9 +62,9 @@ export default function Footer() {
         </div>
 
         {/* Resources */}
-        <div className="md:mt-[2rem]">
+        <div className="md:mt-[2rem] lg:mt-[2rem]">
           <h3 className="font-semibold  text-lg mb-4">Resources</h3>
-          <ul className="space-y-2  text-sm">
+          <ul className="space-y-4  text-sm">
             <li><a href="#">Free eBooks</a></li>
             <li><a href="#">Development Tutorial</a></li>
             <li><a href="#">How to – Blog</a></li>
@@ -74,9 +74,9 @@ export default function Footer() {
       </div>
 
       {/* Bottom  */}
-      <div className="border-t border-gray-700 px-6 md:px-16 py-6 flex flex-col md:flex-row justify-between items-center text-sm">
-        <p className="text-center md:ml-[2rem] md:text-left">© 2021 Bizcam - Consulting Company Inc. All Rights Reserved.</p>
-        <div className="flex gap-4 md:mr-[3rem] mt-4 md:mt-0 text-lg">
+      <div className="border-t px-6 md:px-16 lg:px-28 xl:px-32 border-gray-700  py-6 flex flex-col md:flex-row  lg:flex-row justify-between items-center text-sm">
+        <p className="text-center  lg:text-left md:text-left">© 2021 Bizcam - Consulting Company Inc. All Rights Reserved.</p>
+        <div className="flex gap-4 mt-4 md:mt-0 lgs:mt-0 text-lg">
           <a href="#"><FaFacebookF /></a>
           <a href="#"><FaTwitter /></a>
           <a href="#"><FaInstagram /></a>
