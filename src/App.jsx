@@ -8,6 +8,7 @@ import BlogDetails from "./pages/Blog/BlogDetails";
 import ServiceDetails from "./pages/ServiceDetails";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
+import Register from "./pages/Resgister";
 import AdminLayout from "./AdminPanel/AdminLayout";
 import Dashboard from "./pages/Admin/Dashboard";
 import AddPost from "./pages/Admin/AddPost";
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
         <Route path="service" element={<Service />} />
         <Route path="servicedetails" element={<ServiceDetails />} />
      

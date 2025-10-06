@@ -16,15 +16,16 @@ const Register = async (req, res) => {
     const hashedPassword = await bcrypt.hash(Password, 10);
 
     // File
-    const imagePath = req.file.filename
-    console.log("FILE UPLOADED:", req.file);
+  //  const imagePath = req.file ? req.file.filename : null;
+
+  //   console.log("FILE UPLOADED:", req.file);
 
     const NewUser = new User({
       Fullname,
       Email,
       Password: hashedPassword,
       PhoneNumber,
-      Profile: imagePath,
+    
     });
 
     await NewUser.save();

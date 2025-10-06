@@ -12,7 +12,7 @@ export const AdminDashboard = () => {
    useEffect(() => {
       const GetAllData = async () => {
          try {
-            const response = await get(`${import.meta.env.VITE_API_URL}/dashboard/`);
+            const response = await get("/dashboard/");
             const data = response.data;
             setblogposts(data.Posts)
             setuserss(data.Users)

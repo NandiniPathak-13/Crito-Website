@@ -26,7 +26,7 @@ export const AddPost = () => {
       formData.append("category", category);
 
       
-      const response = await post(`${import.meta.env.VITE_API_URL}/blog/create`, formData, {
+      const response = await post("/blog/create", formData, {
         headers: { "Content-Type": "multipart/form-data" }
       });
 
