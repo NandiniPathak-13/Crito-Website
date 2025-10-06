@@ -16,6 +16,8 @@ const app = express()
 const corsOptions={
    origin: "https://crito-website.vercel.app",
   credentials: true,      
+   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // preflight ke liye
+  allowedHeaders: ["Content-Type", "Authorization"]   
 }
 
 //database connection
@@ -23,6 +25,7 @@ DbConn()
 
 app.use(express.static('public'))
 app.use(cors(corsOptions))
+app.options("*", cors(corsOptions))
 app.use(cookieParser())
 app.use(express.json())
 
