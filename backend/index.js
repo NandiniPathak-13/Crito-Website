@@ -7,17 +7,18 @@ import BlogsRoutes from './routes/Blog.js'
 import DashboardRoutes from './routes/Dashboard.js'
 import cors from 'cors'
 import PublicRoutes from './routes/Public.js'
+import jsonServer from 'json-server'   
 
 dotenv.config()
 
 const PORT = process.env.PORT || 3000
 const app = express()
 
-const corsOptions={
-   origin: "https://crito-website.vercel.app",
-  credentials: true,      
-   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"]   
+const corsOptions = {
+  origin: "https://crito-website.vercel.app",
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }
 
 //database connection
@@ -30,18 +31,20 @@ app.use(cookieParser())
 app.use(express.json())
 
 
-app.get("/", (req , res)=>{
-res.send("hello from bakend")
+app.get("/", (req, res) => {
+  res.send("hello from bakend")
 })
 
-app.use('/auth',AuthRoutes)
-app.use('/blog',BlogsRoutes)
-app.use('/dashboard',DashboardRoutes)
-app.use('/public',PublicRoutes)
+app.use('/auth', AuthRoutes)
+app.use('/blog', BlogsRoutes)
+app.use('/dashboard', DashboardRoutes)
+app.use('/public', PublicRoutes)
 
+const jsonRouter = jsonServer.router('db.json')
+const jsonMiddlewares = jsonServer.defaults()
+app.use('/api/static', jsonMiddlewares, jsonRouter)
 
-
-app.listen(PORT,()=>{
-    console.log(`app is running on PORT ${PORT}`)
+app.listen(PORT, () => {
+  console.log(`app is running on PORT ${PORT}`)
 })
- 
+
