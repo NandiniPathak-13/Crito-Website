@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { FaRegLightbulb, FaRegChartBar, FaRegEdit, FaBrain } from "react-icons/fa";
 
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
@@ -24,6 +25,7 @@ import photo1 from '../assets/photo1.png'
 import photo2 from '../assets/photo.png'
 import professional from '../assets/professional.webp'
 
+// import { Link } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import { BiPlay } from 'react-icons/bi';
@@ -47,20 +49,20 @@ export default function Home() {
   const visibleCards = showAll ? services : services.slice(0, 4);
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
-    fetch("https://crito-website.onrender.com/services")
+    fetch("https://crito-website-1.onrender.com/api/static/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
 
-    fetch("https://crito-website.onrender.com/stats")
+    fetch("https://crito-website-1.onrender.com/api/static/stats")
       .then((res) => res.json())
       .then((data) => setStats(data));
 
-    fetch("https://crito-website.onrender.com/tabs")
+    fetch("https://crito-website-1.onrender.com/api/static/tabs")
       .then((res) => res.json())
       .then((data) => setTabs(data));
 
 
-    fetch("https://crito-website.onrender.com/projects")
+    fetch("https://crito-website-1.onrender.com/api/static/projects")
       .then((res) => res.json())
       .then((data) => setProjects(data));
   }, []);
@@ -151,8 +153,8 @@ export default function Home() {
                   >
                     Home
                   </Link>
-                  
-                 
+
+
                   <Link
                     to="/about"
                     className={`tab ${isActiveTab('/about') ? 'activetab text-black ' : 'text-gray-500 hover:text-black'}`}
@@ -180,11 +182,14 @@ export default function Home() {
                     Contact
                   </Link>
                 </div>
-                <a href="#" className="px-5 py-2 bg-[#FAD783] text-black font-semibold text-xs rounded-full shadow hover:bg-yellow-600">
+                <Link
+                  to="/underdev"
+                  className="px-5 py-2 cursor-pointer bg-[#FAD783] text-black font-semibold text-xs rounded-full shadow hover:bg-yellow-600 transition duration-300"
+                >
                   <span className="flex items-center gap-1">
                     Get Counseling <MdOutlineCallMade size={14} />
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -227,23 +232,23 @@ export default function Home() {
           </p>
 
           <div className="mt-6 sm:flex-row  sm:gap-4 flex justify-center md:justify-start gap-4">
-            <a
-              href="#"
-              className="px-4 py-2 bg-[#FAD783] text-black font-bold text-[12px] rounded-[20px] shadow hover:bg-yellow-700"
+            <Link
+              to="/underdev"
+              className="px-4 py-2 bg-[#FAD783] text-black font-bold text-[12px] rounded-[20px] shadow hover:bg-yellow-300 transition duration-300"
             >
               <span className="flex gap-1 items-center">
                 Get Counseling <MdOutlineCallMade size={15} />
               </span>
-            </a>
+            </Link>
 
-            <a
-              href="#"
-              className="px-4 py-2 bg-transparent border border-black text-black font-bold text-[12px] rounded-[20px] shadow hover:bg-yellow-700"
+            <Link
+              to="/underdev"
+              className="px-4 py-2 bg-transparent border border-black text-black font-bold text-[12px] rounded-[20px] shadow transition duration-300"
             >
               <span className="flex gap-1 items-center">
                 Learn More <MdOutlineCallMade size={15} />
               </span>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -272,12 +277,15 @@ export default function Home() {
                 <h3 className='text-orange-500 font-bold mt-[2rem] lg:ml-[2rem]  md:mt-[4rem]  xl:ml-[2rem] '>Fetures</h3>
                 <h2 className='md:text-[2rem] text-2xl font-semibold lg:ml-[2rem] md:mt-[2rem] lg:mt-[2rem] xl:mt-[4rem]  xl:ml-[2rem]  mt-[2rem] md:ml-[4rem]'>Less Accounting is <br />trusted by thousand <br />of companies</h2>
                 <div className="hidden mt-[40px] md:flex gap-5">
-                  <a
-                    href="#"
-                    className="px-4 py-2 ml-[4rem] lg:ml-[2rem]  xl:ml-[2rem] bg-[#FAD783] text-black font-bold text-[12px] rounded-[20px] shadow hover:bg-yellow-700"
+
+                  <Link
+                    to="/underdev"
+                    className="px-4 py-2 ml-[4rem] lg:ml-[2rem]  xl:ml-[2rem] bg-[#FAD783] text-black font-bold text-[12px] rounded-[20px] shadow hover:bg-yellow-300 transition duration-300"
                   >
-                    <span className='flex gap-1'> Get Counseling <MdOutlineCallMade size={15} /></span>
-                  </a>
+                    <span className="flex gap-1 items-center">
+                      Get Counseling <MdOutlineCallMade size={15} />
+                    </span>
+                  </Link>
                 </div>
 
               </div>
@@ -361,14 +369,14 @@ export default function Home() {
             <div className="flex gap-5 mt-[30px] justify-center md:justify-center lg:justify-start md:ml-[5rem]">
               <a
                 href="#"
-                className="px-4 py-2 bg-[#1b1b1b] text-white font-bold text-[12px] rounded-[20px] shadow hover:bg-yellow-700"
+                className="px-4 py-2 bg-[#1b1b1b] text-white font-bold text-[12px] rounded-[20px] shadow"
               >
                 <span className="flex gap-1"> Learn More <MdOutlineCallMade size={15} color="white" /></span>
               </a>
 
               <a
                 href="#"
-                className="px-2 py-2 bg-transparent border border-black text-black font-bold text-[12px] rounded-full shadow hover:bg-yellow-700"
+                className="px-2 py-2 bg-transparent border border-black text-black font-bold text-[12px] rounded-full shadow "
               >
                 <span><BiPlay size={20} /></span>
               </a>
@@ -396,7 +404,7 @@ export default function Home() {
 
               {/* Right  */}
               <div className="basis-1/2 mt-[1rem] md:mt-[20px]">
-                <p className="text-gray-500 text-[13px] text-center md:text-left ml-[2rem] mr-[2rem] md:ml-[5rem] mr-0 md:mr-[rem] mt-[1rem] md:mt-[1.5rem]">
+                <p className="text-gray-500 text-[13px] text-center md:text-left ml-[2rem] mr-[2rem] md:ml-[5rem] mr-0 md:mr-[0rem] mt-[1rem] md:mt-[1.5rem]">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolorem id doloribus est,
                   dignissimos possimus nesciunt beatae quam minima inventore libero magni tenetur maxime amet?
                   Consectetur eum fugit maxime ad.
@@ -408,7 +416,7 @@ export default function Home() {
 
             <div className="min-h-screen flex flex-col items-center justify-center py-16">
               {/*Cards */}
-              <div className="grid mx-auto grid-cols-1 md:grid-cols-4 gap-6  w-11/12 max-w-6xl">
+              <div className="grid mx-auto grid-cols-1 md:grid-cols-4 gap-6  w-11/11 max-w-6xl">
                 {visibleCards.map((s) => (
                   <div
                     key={s.id}
@@ -442,7 +450,7 @@ export default function Home() {
                 </button>
               )}
 
-              <div className=" md:pr-[8rem] md:pl-[8rem]  border-t border-gray-600 border-b pt-[1rem] pb-[1rem] md:pt-[2rem]  md:pb-[2rem] grid grid-cols-4 md:grid-cols-4 gap-6 md:gap-8 mt-16 w-11/12 text-center">
+              <div className="   border-t border-gray-600 border-b pt-[1rem] pb-[1rem] lg:pt-[2rem]  lg:pb-[2rem] xl:pt-[2rem]  xl:pb-[2rem] md:pt-[2rem]  md:pb-[2rem] grid grid-cols-4 md:grid-cols-4 gap-6 md:gap-9 mt-16 w-11/11 text-center">
                 {stats.map((s) => (
                   <div key={s.id}>
                     <h2 className="md:text-3xl text-[1rem] font-bold">{s.value}</h2>
@@ -456,72 +464,80 @@ export default function Home() {
 
         </div>
         {/* SECTION - 4 */}
-        <div className="section4">
-          <div className="flex px-6 md:px-16 lg:px-28 xl:px-32  md:flex-col lg:flex-row xl:flex-row flex-col md:text-center text-center xl:text-left lg:text-left lg:ml-[2rem]">
-            <div className='basis-1/2 '>
+        <section className="flex flex-col md:flex-row items-center px-6 md:px-16 lg:px-28 xl:px-32 gap-10 py-10">
+          {/* Left Content */}
+          <div className="md:w-1/2 space-y-6">
+            {/* <p className="text-sm font-semibold text-red-500">Why Choose Us</p> */}
+            <h3 className='text-orange-500 font-bold '>Why Choose Us</h3>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
+              Reasons Why We are Best Business Consulting Agency
+            </h2>
 
-
-              <h3 className='text-orange-500 font-bold lg:ml-[3rem] xl:ml-[3rem] mt-[4rem]'>Why Choose Us</h3>
-              <h2 className='lg:text-[2rem] xl:text-[2rem] md:text-[1.7rem]  text-[1.5rem] font-semibold mt-[2rem] lg:ml-[3rem]  xl:ml-[3rem]'>Reasons Why We<br />are Best Business <br />Consulting Agency</h2>
-              <div className='mt-[2rem]'>
-
-                <span className='pt-[2rem] lg:ml-[8rem] xl:ml-[8rem] font-bold'>Intro Video</span>
+            <div className="space-y-5 mt-6">
+              {/* Process Excellence */}
+              <div className="flex items-start gap-4">
+                <FaRegLightbulb className="text-black text-2xl mt-1" />
+                <div>
+                  <h4 className="font-semibold text-gray-800">Process Excellence</h4>
+                  <p className="text-gray-500 text-sm">
+                    Dominion fowle in there light she does lights.
+                  </p>
+                </div>
               </div>
 
-              <p className='text-gray-500 text-left text-[13px] mr-[7rem] ml-[7rem] lg:ml-[8rem] mt-[0.2rem]'>
-                In their lights she does lights.
-              </p>
-              <div className='mt-[-2rem]  ml-[5rem]'>  <span > <BiPlay size={20} /></span>
-              </div>
-              <div className='mt-[2rem]'>
-
-                <span className='pt-[2rem] lg:ml-[8rem] xl:ml-[8rem] font-bold'>Intro Video</span>
-              </div>
-
-              <p className='text-gray-500 text-left text-[13px] mr-[7rem] ml-[7rem] lg:ml-[8rem] mt-[0.2rem]'>
-                In their lights she does lights.
-              </p>
-              <div className='mt-[-2rem]  ml-[5rem]'>  <span > <BiPlay size={20} /></span>
-              </div>
-              <div className='mt-[2rem]'>
-
-                <span className='pt-[2rem] lg:ml-[8rem] xl:ml-[8rem] font-bold'>Intro Video</span>
+              {/* Strategic Planning */}
+              <div className="flex items-start gap-4">
+                <FaRegChartBar className="text-black text-2xl mt-1" />
+                <div>
+                  <h4 className="font-semibold text-gray-800">Strategic Planning</h4>
+                  <p className="text-gray-500 text-sm">
+                    Dominion fowle in there light she does lights.
+                  </p>
+                </div>
               </div>
 
-              <p className='text-gray-500 text-left text-[13px] mr-[7rem] ml-[7rem] lg:ml-[8rem] mt-[0.2rem]'>
-                In their lights she does lights.
-              </p>
-              <div className='mt-[-2rem]  ml-[5rem]'>  <span > <BiPlay size={20} /></span>
-              </div>
-              <div className='mt-[2rem]'>
-
-                <span className='pt-[2rem] lg:ml-[8rem] xl:ml-[8rem] font-bold'>Intro Video</span>
-              </div>
-
-              <p className='text-gray-500 text-left text-[13px] mr-[7rem] ml-[7rem] lg:ml-[8rem] mt-[0.2rem]'>
-                In their lights she does lights.
-              </p>
-              <div className='mt-[-2rem]  ml-[5rem]'>  <span > <BiPlay size={20} /></span>
+              {/* Experience Design */}
+              <div className="flex items-start gap-4">
+                <FaRegEdit className="text-black text-2xl mt-1" />
+                <div>
+                  <h4 className="font-semibold text-gray-800">Experience Design</h4>
+                  <p className="text-gray-500 text-sm">
+                    Dominion fowle in there light she does lights.
+                  </p>
+                </div>
               </div>
 
-
-            </div>
-            <div className='basis-1/2  pt-[15rem]'>
-              <div className='bg-[#F0EFEA] relative pl-[4rem] pt-[-4rem] md:pl-[6rem] pb-[15rem] md:pb-[20rem] pr-[6rem]'>
-
-                <img src={photo2} className='absolute mt-[-5rem] w-90 md:w-120 h-auto' alt="" />
+              {/* Artificial Intelligence */}
+              <div className="flex items-start gap-4">
+                <FaBrain className="text-black text-2xl mt-1" />
+                <div>
+                  <h4 className="font-semibold text-gray-800">Artificial Intelligence</h4>
+                  <p className="text-gray-500 text-sm">
+                    Dominion fowle in there light she does lights.
+                  </p>
+                </div>
               </div>
-
             </div>
           </div>
-        </div>
+
+          {/* Right Image */}
+          <div className="md:w-1/2 flex justify-center">
+            <div className="bg-gray-100 pt-0 p-8">
+              <img
+                src={photo2}
+                alt="Business consulting meeting"
+                className=" object-cover w-full h-auto"
+              />
+            </div>
+          </div>
+        </section>
 
 
         {/* SECTION - 5 */}
-        <div className="section5 text-center">
+        <div className="section5 text-center  px-6 md:px-16 lg:px-28 xl:px-32">
           <h3 className='text-orange-500 font-bold mt-[4rem]'>Project & Case Studies</h3>
           <h2 className='text-[2rem] font-semibold mt-[2rem] '>Let's Looks<br />Our Global Projects</h2>
-          <div className="py-16 flex flex-col items-center">
+          <div className="py-16 flex flex-col items-center w-11/11">
 
             <div className="flex flex-wrap md:justify-center justify-center lg:justify-start gap-3 sm:gap-4 lg:gap-6 pt-4 pb-4 border-t border-b border-gray-300">
               <Link
@@ -562,7 +578,7 @@ export default function Home() {
 
             {/* <Outlet /> */}
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 w-2/3 max-w-4xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 w-2/2 max-w-4xl">
               {projects.map((p) => (
                 <div
                   key={p.id}
@@ -579,38 +595,44 @@ export default function Home() {
                   </div>
                   <div className="flex items-center justify-between text-sm text-gray-600 mt-2">
                     <span>{p.date}</span>
-                    <a href="#" className="flex items-center gap-1 hover:underline">
+                    <Link
+                      to="/underdev"
+                      className="flex items-center gap-1 hover:underline transition duration-200"
+                    >
                       Read More <FaArrowRightLong size={16} />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               ))}
             </div>
 
 
-            <button className="mt-12 px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition">
+            <Link
+              to="/underdev"
+              className="mt-12 inline-block px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition duration-300"
+            >
               All Recent Projects →
-            </button>
+            </Link>
           </div>
         </div>
 
         {/* SECTION - 6 */}
-        <div className="yellowcontainer pb-[8rem] pt-[2rem] md:pl-[8rem] pr-[2rem] pl-[2rem] md:pr-[8rem] bg-[#FAD783]">
+        <div className="yellowcontainer  px-6 md:px-16 lg:px-28 xl:px-32 pb-[8rem] pt-[2rem]  pr-[2rem] pl-[2rem]  bg-[#FAD783]">
 
-          <div className="flex flex-col md:flex-row items-center md:items-start">
+          <div className="flex flex-col md:flex-row lg:flex-row items-center lg:items-start md:items-start">
 
-            <div className="md:basis-1/2 text-center md:text-left">
-              <h3 className="text-orange-500 font-bold mt-8 md:mt-[4rem]">
+            <div className="md:basis-1/2 lg:basis-1/2  text-center lg:text-left md:text-left">
+              <h3 className="text-orange-500 font-bold mt-8 lg:mt-[4rem] md:mt-[4rem]">
                 Meet Our Teams
               </h3>
-              <h2 className="text-2xl md:text-[2rem] text-black font-semibold mt-6 md:mt-[2rem]">
+              <h2 className="text-2xl md:text-[2rem]  lg:text-[2rem] text-black font-semibold mt-6 lg:mt-[2rem] md:mt-[2rem]">
                 Experience <br /> Team Members
               </h2>
             </div>
 
 
-            <div className="md:basis-1/2 flex justify-center md:justify-end mt-6 md:mt-0">
-              <button className="px-4 md:mt-40 py-2 border border-black rounded-full hover:bg-black hover:text-white transition">
+            <div className="md:basis-1/2 flex justify-center lg:mt-0 lg:justify-end mt-6 md:mt-0">
+              <button className="px-4 md:mt-40 lg:mt-40 py-2 border border-black rounded-full hover:bg-black hover:text-white transition">
                 Browse Services →
               </button>
             </div>
@@ -619,23 +641,20 @@ export default function Home() {
 
 
           <div className="w-full bg-[#FAD783] m-auto">
-            <div className="pt-20 md:px-4">
+            <div className="pt-20 ">
               <Slider {...settings}>
-                {members.map((d, index) => (
-                  <div
-                    key={index}
-                    className="cards md:h-[400px] text-black md:px-2"
-                  >
-                    <div className="image flex flex-col justify-center items-center md:h-[250px]">
+                {members.map((d) => (
+                  <div key={d.id} className="px-2">
+                    <div className="   overflow-hidden text-left">
                       <img
-                        className="md:h-[16rem] h-[10rem] w-auto"
                         src={d.img}
                         alt={d.name}
+                        className="w-full h-64 object-cover"
                       />
-                    </div>
-                    <div className="texts flex flex-col justify-center items-center gap-4 p-4">
-                      <h1 className="text-black text-[0.8rem] md:text-[1rem] font-[800] md:font-bold">{d.name}</h1>
-                      <p className="text-black md:text-[1rem] text-[0.7rem] ">{d.role}</p>
+                      <div className="p-2 pl-0">
+                        <h4 className="font-semibold text-lg">{d.name}</h4>
+                        <p className="text-gray-500">{d.role}</p>
+                      </div>
                     </div>
                   </div>
                 ))}

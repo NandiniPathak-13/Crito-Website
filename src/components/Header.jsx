@@ -104,11 +104,14 @@ const Header = () => {
                                     Contact
                                 </Link>
                             </div>
-                            <a href="#" className="px-5 py-2 bg-[#FAD783] text-black font-semibold text-xs rounded-full shadow hover:bg-yellow-600">
-                                <span className="flex items-center gap-1">
-                                    Get Counseling <MdOutlineCallMade size={14} />
-                                </span>
-                            </a>
+                              <Link
+                                             to="/underdev"
+                                             className="px-5 py-2 cursor-pointer bg-[#FAD783] text-black font-semibold text-xs rounded-full shadow hover:bg-yellow-600 transition duration-300"
+                                           >
+                                             <span className="flex items-center gap-1">
+                                               Get Counseling <MdOutlineCallMade size={14} />
+                                             </span>
+                                           </Link>
                         </div>
                     </div>
 

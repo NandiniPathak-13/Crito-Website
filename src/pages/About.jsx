@@ -60,20 +60,20 @@ export const About = () => {
     };
     const [stats, setStats] = useState([]);
     useEffect(() => {
-        fetch("https://crito-website.onrender.com/services")
+        fetch("https://crito-website-1.onrender.com/api/static/services")
             .then((res) => res.json())
             .then((data) => setServices(data));
 
-        fetch("https://crito-website.onrender.com/stats")
+        fetch("https://crito-website-1.onrender.com/api/static/stats")
             .then((res) => res.json())
             .then((data) => setStats(data));
 
-        fetch("https://crito-website.onrender.com/tabs")
+        fetch("https://crito-website-1.onrender.com/api/static/tabs")
             .then((res) => res.json())
             .then((data) => setTabs(data));
 
 
-        fetch("https://crito-website.onrender.com/projects")
+        fetch("https://crito-website-1.onrender.com/api/static/projects")
             .then((res) => res.json())
             .then((data) => setProjects(data));
     }, []);

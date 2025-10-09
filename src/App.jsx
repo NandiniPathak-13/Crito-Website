@@ -15,6 +15,7 @@ import AddPost from "./pages/Admin/AddPost";
 import Users from "./pages/Admin/Users";
 import AllPosts from "./pages/Admin/AllPosts";
 import BlogLayout from "./BlogsPanel/BlogLayout";
+import UnderDevelopment from "./pages/UnDev";
 
 
 
@@ -29,17 +30,21 @@ const App = () => {
         <Route path="about" element={<About />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
-        <Route path="service" element={<Service />} />
-        <Route path="servicedetails" element={<ServiceDetails />} />
-     
+        <Route path="underdev" element={<UnderDevelopment />} />
 
-        <Route path= "blog" element={<BlogLayout />}>
+
+        <Route path="service" element={<Service />}>
+          <Route index element={<Service />} />
+          <Route path="servicedetails" element={<ServiceDetails />} />
+
+        </Route>
+        <Route path="blog" element={<BlogLayout />}>
           <Route index element={<BlogPosts />} />
           <Route path="blogdetails/:id" element={<BlogDetails />} />
-          
+
         </Route>
-        
-        
+
+
         <Route path="contact" element={<Contact />} />
 
 

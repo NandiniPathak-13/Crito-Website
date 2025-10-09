@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../index.css'
+import { Link } from "react-router-dom";
 
 
 const settings = {
@@ -58,7 +59,7 @@ const blogPosts = [
 
 const BlogSection = () => {
     return (
-        <div className="bg-white pb-[5rem] mt-[7rem] pr-[5rem] pl-[5rem] md:pr-[8rem] md:pl-[8rem]">
+        <div className="bg-white pb-[5rem] mt-[7rem] px-6 md:px-16 lg:px-28 xl:px-32">
 
             <div className="max-w-7xl mx-auto">
 
@@ -72,9 +73,12 @@ const BlogSection = () => {
                         </h2>
                     </div>
 
-                    <button className="border border-gray-300 md:ml-[0] ml-[3rem] text-sm px-5 py-2 rounded-full font-medium hover:bg-gray-100 transition self-start md:self-center">
-                        Browse Services →
-                    </button>
+                   <Link
+  to="/blog"
+  className="border border-gray-300 md:ml-[0] ml-[3rem] text-sm px-5 py-2 rounded-full font-medium hover:bg-gray-100 transition duration-300 self-start md:self-center inline-block"
+>
+  Browse Services →
+</Link>
                 </div>
 
 
@@ -87,7 +91,7 @@ const BlogSection = () => {
                                 <img
                                     src={post.image}
                                     alt={post.title}
-                                    className="w-full h-48 object-cover rounded-md"
+                                    className="w-full h-48 object-cover "
                                 />
                                 <div className="absolute top-3 left-3 bg-yellow-400 text-black px-2 py-1 text-xs font-semibold rounded">
                                     {post.date}
