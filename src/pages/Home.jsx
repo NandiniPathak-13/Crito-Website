@@ -77,28 +77,28 @@ export default function Home() {
     { name: "Kimberly 7 Hansen", role: "Senior Consultant", img: professional },
     { name: "Kimberly 8 Hansen", role: "Senior Consultant", img: professional }
   ];
+
   const settings = {
-    focusOnSelect: true,
+    dots: true,
+       
     infinite: true,
+    speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    speed: 900,
-    arrows: false,
-
     responsive: [
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
+        breakpoint: 1280, // xl
+        settings: { slidesToShow: 3 }
       },
       {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        },
+        breakpoint: 1024, // lg
+        settings: { slidesToShow: 2 }
       },
-    ],
+      {
+        breakpoint: 768, // md
+        settings: { slidesToShow: 1 }
+      }
+    ]
   };
 
 
