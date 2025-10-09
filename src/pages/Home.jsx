@@ -640,7 +640,7 @@ export default function Home() {
 
 
 
-          <div className="w-full bg-[#FAD783] m-auto">
+          <div className=" bg-[#FAD783]">
             <div className="pt-20 ">
               <Slider {...settings}>
                 {members.map((d) => (
